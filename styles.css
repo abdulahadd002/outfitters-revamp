@@ -54,6 +54,29 @@ body {
 
 ::selection { background: var(--ink); color: var(--bone); }
 
+/* Accessible focus rings — only show on keyboard nav, not mouse clicks */
+*:focus { outline: none; }
+*:focus-visible {
+  outline: 2px solid var(--brass);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+.btn:focus-visible,
+.icon-btn:focus-visible,
+.cart-btn:focus-visible,
+.bottom-nav__item:focus-visible,
+.product__quick:focus-visible {
+  outline-offset: 2px;
+}
+.product__media:focus-visible,
+.cat-tile:focus-visible,
+.campaign__half:focus-visible,
+.community__tile:focus-visible,
+.mn-feature:focus-visible {
+  outline-offset: -2px;
+  outline-width: 3px;
+}
+
 .kicker {
   font-family: var(--font-mono);
   font-size: 0.7rem;
@@ -1757,18 +1780,18 @@ html.lenis, html.lenis body { height: auto; }
 .loader__wordmark span {
   display: inline-block;
   transform: translateY(110%);
-  animation: loaderLetter 0.7s var(--ease-award) forwards;
+  animation: loaderLetter 0.5s var(--ease-award) forwards;
 }
-.loader__wordmark span:nth-child(1) { animation-delay: 0.05s; }
-.loader__wordmark span:nth-child(2) { animation-delay: 0.10s; }
-.loader__wordmark span:nth-child(3) { animation-delay: 0.15s; }
-.loader__wordmark span:nth-child(4) { animation-delay: 0.20s; }
-.loader__wordmark span:nth-child(5) { animation-delay: 0.25s; }
-.loader__wordmark span:nth-child(6) { animation-delay: 0.30s; }
-.loader__wordmark span:nth-child(7) { animation-delay: 0.35s; }
-.loader__wordmark span:nth-child(8) { animation-delay: 0.40s; }
-.loader__wordmark span:nth-child(9) { animation-delay: 0.45s; }
-.loader__wordmark span:nth-child(10) { animation-delay: 0.50s; }
+.loader__wordmark span:nth-child(1) { animation-delay: 0.02s; }
+.loader__wordmark span:nth-child(2) { animation-delay: 0.04s; }
+.loader__wordmark span:nth-child(3) { animation-delay: 0.06s; }
+.loader__wordmark span:nth-child(4) { animation-delay: 0.08s; }
+.loader__wordmark span:nth-child(5) { animation-delay: 0.10s; }
+.loader__wordmark span:nth-child(6) { animation-delay: 0.12s; }
+.loader__wordmark span:nth-child(7) { animation-delay: 0.14s; }
+.loader__wordmark span:nth-child(8) { animation-delay: 0.16s; }
+.loader__wordmark span:nth-child(9) { animation-delay: 0.18s; }
+.loader__wordmark span:nth-child(10) { animation-delay: 0.20s; }
 
 @keyframes loaderLetter {
   to { transform: translateY(0); }
@@ -1785,9 +1808,13 @@ html.lenis, html.lenis body { height: auto; }
   height: 100%;
   background: var(--brass);
   transform: translateX(-100%);
-  animation: loaderBar 0.9s var(--ease-award) 0.5s forwards;
+  animation: loaderBar 0.55s var(--ease-award) 0.25s forwards;
 }
 @keyframes loaderBar { to { transform: translateX(0); } }
+
+.loader {
+  transition: clip-path 0.7s var(--ease-award), opacity 0.3s ease 0.5s;
+}
 
 /* ---------- Custom cursor ---------- */
 .cursor {

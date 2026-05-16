@@ -3,12 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Outfitters — Shop Men, Women & Juniors</title>
-  <meta name="description" content="Outfitters Pakistan. Shop the latest in shirts, denim, tees, trousers and footwear for men, women, and juniors." />
+
+  <title>Outfitters — Pause Collection · New Drop</title>
+  <meta name="description" content="Contemporary fashion for men, women, and juniors. Shop the Pause Collection. Free 2-day delivery in Lahore, Karachi, Islamabad. Cash on Delivery." />
   <meta name="theme-color" content="#1a1310" />
+  <meta name="author" content="Outfitters" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231a1310' rx='8'/%3E%3Ctext x='50%25' y='53%25' text-anchor='middle' dominant-baseline='middle' font-family='Times New Roman, serif' font-size='44' font-style='italic' font-weight='500' fill='%23c8a165'%3EO%3C/text%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' fill='%231a1310' rx='32'/%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' dominant-baseline='middle' font-family='Times New Roman, serif' font-size='120' font-style='italic' font-weight='500' fill='%23c8a165'%3EO%3C/text%3E%3C/svg%3E" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Outfitters" />
+  <meta property="og:title" content="Outfitters — Pause Collection · New Drop" />
+  <meta property="og:description" content="Contemporary fashion for men, women, and juniors. Shop the Pause Collection. Free 2-day delivery in Lahore, Karachi, Islamabad." />
+  <meta property="og:image" content="https://outfitters.com.pk/cdn/shop/files/Pause-Menu_tile-men.jpg?width=1200" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="800" />
+  <meta property="og:image:alt" content="Outfitters Pause Collection campaign" />
+  <meta property="og:url" content="https://abdulahadd002.github.io/outfitters-revamp/mobile-preview.html" />
+  <meta property="og:locale" content="en_PK" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Outfitters — Pause Collection · New Drop" />
+  <meta name="twitter:description" content="Contemporary fashion for men, women, and juniors. Free 2-day delivery in major Pakistani cities." />
+  <meta name="twitter:image" content="https://outfitters.com.pk/cdn/shop/files/Pause-Menu_tile-men.jpg?width=1200" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://outfitters.com.pk" />
+  <link rel="dns-prefetch" href="https://unpkg.com" />
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,700;0,6..96,800;1,6..96,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
 *, *::before, *::after { box-sizing: border-box; }
@@ -46,6 +69,10 @@ ul { list-style: none; }
 
 body { font-family: var(--font-body); color: var(--ink); background: var(--bone); font-size: 16px; font-weight: 400; }
 ::selection { background: var(--ink); color: var(--bone); }
+*:focus { outline: none; }
+*:focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; border-radius: 2px; }
+.btn:focus-visible, .icon-btn:focus-visible, .cart-btn:focus-visible, .bottom-nav__item:focus-visible, .product__quick:focus-visible { outline-offset: 2px; }
+.product__media:focus-visible, .cat-tile:focus-visible, .campaign__half:focus-visible, .community__tile:focus-visible, .mn-feature:focus-visible { outline-offset: -2px; outline-width: 3px; }
 
 .kicker { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--dust); font-weight: 500; }
 .kicker--brass { color: var(--brass-deep); }
@@ -258,21 +285,22 @@ body { font-family: var(--font-body); color: var(--ink); background: var(--bone)
 .loader { position: fixed; inset: 0; z-index: 999; background: var(--ink); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; transition: clip-path 1.1s var(--ease-award), opacity 0.4s ease 0.9s; clip-path: inset(0 0 0 0); }
 .loader.is-done { clip-path: inset(0 0 100% 0); pointer-events: none; }
 .loader__wordmark { font-family: var(--font-display); font-size: clamp(2rem, 6vw, 4.5rem); font-weight: 500; letter-spacing: 0.04em; color: var(--bone); display: flex; overflow: hidden; }
-.loader__wordmark span { display: inline-block; transform: translateY(110%); animation: loaderLetter 0.7s var(--ease-award) forwards; }
-.loader__wordmark span:nth-child(1) { animation-delay: 0.05s; }
-.loader__wordmark span:nth-child(2) { animation-delay: 0.10s; }
-.loader__wordmark span:nth-child(3) { animation-delay: 0.15s; }
-.loader__wordmark span:nth-child(4) { animation-delay: 0.20s; }
-.loader__wordmark span:nth-child(5) { animation-delay: 0.25s; }
-.loader__wordmark span:nth-child(6) { animation-delay: 0.30s; }
-.loader__wordmark span:nth-child(7) { animation-delay: 0.35s; }
-.loader__wordmark span:nth-child(8) { animation-delay: 0.40s; }
-.loader__wordmark span:nth-child(9) { animation-delay: 0.45s; }
-.loader__wordmark span:nth-child(10) { animation-delay: 0.50s; }
+.loader__wordmark span { display: inline-block; transform: translateY(110%); animation: loaderLetter 0.5s var(--ease-award) forwards; }
+.loader__wordmark span:nth-child(1) { animation-delay: 0.02s; }
+.loader__wordmark span:nth-child(2) { animation-delay: 0.04s; }
+.loader__wordmark span:nth-child(3) { animation-delay: 0.06s; }
+.loader__wordmark span:nth-child(4) { animation-delay: 0.08s; }
+.loader__wordmark span:nth-child(5) { animation-delay: 0.10s; }
+.loader__wordmark span:nth-child(6) { animation-delay: 0.12s; }
+.loader__wordmark span:nth-child(7) { animation-delay: 0.14s; }
+.loader__wordmark span:nth-child(8) { animation-delay: 0.16s; }
+.loader__wordmark span:nth-child(9) { animation-delay: 0.18s; }
+.loader__wordmark span:nth-child(10) { animation-delay: 0.20s; }
 @keyframes loaderLetter { to { transform: translateY(0); } }
 .loader__bar { width: clamp(180px, 22vw, 280px); height: 1px; background: rgba(245, 240, 232, 0.18); overflow: hidden; }
-.loader__bar-fill { width: 100%; height: 100%; background: var(--brass); transform: translateX(-100%); animation: loaderBar 0.9s var(--ease-award) 0.5s forwards; }
+.loader__bar-fill { width: 100%; height: 100%; background: var(--brass); transform: translateX(-100%); animation: loaderBar 0.55s var(--ease-award) 0.25s forwards; }
 @keyframes loaderBar { to { transform: translateX(0); } }
+.loader { transition: clip-path 0.7s var(--ease-award), opacity 0.3s ease 0.5s; }
 
 .cursor { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; transform: translate3d(-100px, -100px, 0); display: flex; align-items: center; justify-content: center; mix-blend-mode: difference; transition: opacity 0.2s ease; opacity: 0; }
 .cursor.is-active { opacity: 1; }
@@ -938,7 +966,7 @@ body { font-family: var(--font-body); color: var(--ink); background: var(--bone)
       loader.classList.add("is-done");
       document.body.classList.add("is-loaded");
       revealVisible();
-    }, reduced ? 200 : 1200);
+    }, reduced ? 150 : 900);
   });
 
   function initLenis() {

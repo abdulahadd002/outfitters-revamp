@@ -19,7 +19,7 @@ window.addEventListener("load", () => {
     loader.classList.add("is-done");
     document.body.classList.add("is-loaded");
     revealVisible();
-  }, reduced ? 200 : 1500);
+  }, reduced ? 150 : 900);
 });
 
 /* ---------- Lenis smooth scroll (loaded from CDN) ---------- */
