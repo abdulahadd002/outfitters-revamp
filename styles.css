@@ -1562,8 +1562,8 @@ body {
     transition: transform 0.3s var(--ease-snap), background 0.3s ease;
   }
   .bottom-nav__search svg { width: 22px; height: 22px; }
+  .bottom-nav__search svg circle, .bottom-nav__search svg path { stroke: var(--bone); }
   .bottom-nav__item--center:active .bottom-nav__search { transform: scale(0.92); background: var(--brass-deep); }
-  .bottom-nav__item--center span { color: var(--ink); margin-top: 6px; }
 
   .bottom-nav__bag { position: relative; display: inline-flex; }
   .bottom-nav__count {
