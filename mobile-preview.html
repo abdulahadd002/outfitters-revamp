@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Outfitters — Shop Men, Women & Juniors</title>
+  <meta name="description" content="Outfitters Pakistan. Shop the latest in shirts, denim, tees, trousers and footwear for men, women, and juniors." />
+  <meta name="theme-color" content="#1a1310" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://outfitters.com.pk" />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,700;0,6..96,800;1,6..96,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { line-height: 1.5; -webkit-font-smoothing: antialiased; }
+img, picture, svg, video { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; background: none; border: 0; cursor: pointer; color: inherit; }
+input { font: inherit; }
+ul { list-style: none; }
+
+:root {
+  --ink: #1a1310;
+  --bone: #f5f0e8;
+  --sand: #e8dcc4;
+  --sand-deep: #d9c9a8;
+  --brass: #c8a165;
+  --brass-deep: #a8854c;
+  --terracotta: #a8341c;
+  --indigo: #2d3b5c;
+  --dust: #9b8e7a;
+  --paper: #faf6ef;
+  --font-display: "Bodoni Moda", "Times New Roman", serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --ease-soft: cubic-bezier(.4, 0, .2, 1);
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+  --ease-award: cubic-bezier(.16, 1, .3, 1);
+  --ease-snap: cubic-bezier(.65, .05, 0, 1);
+  --container: 1440px;
+  --gutter: clamp(1.25rem, 4vw, 4rem);
+  --section-y: clamp(4rem, 9vw, 7rem);
+}
+
+body { font-family: var(--font-body); color: var(--ink); background: var(--bone); font-size: 16px; font-weight: 400; }
+::selection { background: var(--ink); color: var(--bone); }
+
+.kicker { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--dust); font-weight: 500; }
+.kicker--brass { color: var(--brass-deep); }
+.kicker--light { color: var(--bone); opacity: 0.85; }
+.kicker--sale { color: var(--terracotta); }
+
+.section-title { font-family: var(--font-display); font-weight: 500; font-size: clamp(2.5rem, 6vw, 5rem); line-height: 0.95; letter-spacing: -0.035em; color: var(--ink); margin-top: 0.5rem; text-wrap: balance; overflow: hidden; }
+.section-title em { font-style: italic; font-weight: 400; color: var(--brass-deep); }
+.section-title--light { color: var(--bone); }
+.section-title--light em { color: var(--brass); }
+
+.section-lede { max-width: 48ch; margin-top: 1rem; font-size: clamp(1rem, 1.1vw, 1.1rem); line-height: 1.55; color: #4a3a30; }
+.section-lede--light { color: rgba(245, 240, 232, 0.78); }
+.section-head { padding: 0 var(--gutter); margin-bottom: clamp(2rem, 4vw, 3.5rem); }
+.section-head--center { text-align: center; }
+.section-head--center .section-lede { margin-left: auto; margin-right: auto; }
+
+.link-underline { font-family: var(--font-body); font-weight: 500; font-size: 0.875rem; letter-spacing: 0.01em; background-image: linear-gradient(currentColor, currentColor); background-size: 100% 1px; background-repeat: no-repeat; background-position: 0 100%; padding-bottom: 2px; transition: background-size 0.35s var(--ease-soft); display: inline-block; }
+.link-underline:hover { background-size: 0 1px; background-position: 100% 100%; }
+.link-underline--light { color: var(--bone); }
+
+.btn { display: inline-flex; align-items: center; gap: 0.6em; padding: 0.95rem 1.6rem; font-family: var(--font-body); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; border-radius: 2px; transition: background-color 0.3s var(--ease-soft), color 0.3s var(--ease-soft), border-color 0.3s var(--ease-soft); }
+.btn--primary { background: var(--ink); color: var(--bone); border: 1px solid var(--ink); }
+.btn--primary:hover { background: var(--brass-deep); border-color: var(--brass-deep); }
+.btn--outline { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
+.btn--outline:hover { background: var(--ink); color: var(--bone); }
+.btn--brass { background: var(--brass); color: var(--ink); border: 1px solid var(--brass); }
+.btn--brass:hover { background: var(--ink); color: var(--bone); border-color: var(--ink); }
+
+.utility-bar { background: var(--ink); color: var(--bone); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; font-family: var(--font-mono); font-weight: 400; }
+.utility-bar__inner { max-width: var(--container); margin: 0 auto; padding: 0.6rem var(--gutter); display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; align-items: center; justify-content: center; }
+.utility-bar .sep { opacity: 0.4; }
+.utility-bar strong { color: var(--brass); font-weight: 500; }
+
+.header { position: sticky; top: 0; z-index: 80; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 1rem var(--gutter); background: rgba(245, 240, 232, 0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(26, 19, 16, 0.08); transition: background-color 0.3s var(--ease-soft); }
+.header__nav { display: flex; gap: 1.8rem; align-items: center; }
+.header__nav a { font-size: 0.85rem; font-weight: 500; letter-spacing: 0.02em; padding: 0.5rem 0; transition: color 0.3s var(--ease-soft); }
+.header__nav a:hover { color: var(--brass-deep); }
+.header__nav-sale { color: var(--terracotta); }
+.header__nav-sale:hover { color: var(--terracotta); opacity: 0.7; }
+.header__wordmark { font-family: var(--font-display); font-size: clamp(1.5rem, 2.2vw, 1.95rem); font-weight: 500; letter-spacing: 0.06em; text-align: center; }
+.header__actions { display: flex; justify-content: flex-end; gap: 0.3rem; align-items: center; }
+.icon-btn { width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; transition: background-color 0.3s var(--ease-soft); }
+.icon-btn:hover { background: rgba(26, 19, 16, 0.06); }
+.icon-btn svg { width: 18px; height: 18px; }
+.cart-btn { font-size: 0.85rem; letter-spacing: 0.05em; font-weight: 500; padding: 0.5rem 0.9rem; margin-left: 0.5rem; border-bottom: 1px solid transparent; transition: border-color 0.3s var(--ease-soft); }
+.cart-btn:hover { border-bottom-color: var(--ink); }
+.cart-btn sup { font-family: var(--font-mono); font-size: 0.7em; opacity: 0.6; }
+.header__menu-toggle { display: none; }
+
+.mobile-nav { position: fixed; inset: 0; background: var(--bone); z-index: 70; padding: 6rem 2rem 2rem; display: flex; flex-direction: column; gap: 1.5rem; }
+.mobile-nav[hidden] { display: none; }
+.mobile-nav a { font-family: var(--font-display); font-size: 2rem; font-weight: 500; }
+
+.hero { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.4fr); gap: clamp(2rem, 5vw, 5rem); align-items: end; padding: clamp(3rem, 7vw, 6rem) var(--gutter) clamp(3rem, 6vw, 4rem); max-width: var(--container); margin: 0 auto; }
+.hero__copy { padding-bottom: clamp(1rem, 4vw, 3rem); }
+.hero__title { font-family: var(--font-display); font-weight: 500; font-size: clamp(3.5rem, 10vw, 9.5rem); line-height: 0.88; letter-spacing: -0.045em; margin-top: 1.2rem; color: var(--ink); overflow: hidden; }
+.hero__title em { font-style: italic; color: var(--brass-deep); font-weight: 400; }
+.hero__sub { margin-top: 1.5rem; font-size: clamp(1.05rem, 1.3vw, 1.2rem); line-height: 1.45; color: #3d2e25; max-width: 38ch; }
+.hero__cta { margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 0.8rem; }
+.hero__credit { margin-top: 2.2rem; font-size: 0.75rem; color: var(--dust); letter-spacing: 0.04em; }
+.hero__image { position: relative; overflow: hidden; border-radius: 2px; isolation: isolate; }
+.hero__image img { width: 100%; height: clamp(420px, 78vh, 820px); object-fit: cover; filter: saturate(0.92) contrast(1.02); transition: transform 1.6s var(--ease-out); }
+.hero__image:hover img { transform: scale(1.02); }
+.hero__image-caption { position: absolute; left: 0; right: 0; bottom: 0; padding: 1.5rem; background: linear-gradient(to top, rgba(26,19,16,0.85), rgba(26,19,16,0)); color: var(--bone); display: flex; flex-direction: column; gap: 0.3rem; font-size: 0.85rem; z-index: 2; }
+.hero__image-caption .kicker { color: var(--brass); }
+.hero__image::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 55%; background: linear-gradient(to bottom, rgba(26,19,16,0.55) 0%, rgba(26,19,16,0.25) 45%, rgba(26,19,16,0) 100%); z-index: 1; pointer-events: none; }
+.hero__copy { text-shadow: 0 2px 30px rgba(0,0,0,0.55), 0 1px 4px rgba(0,0,0,0.4); }
+.cat-tile { isolation: isolate; }
+.cat-tile > img { z-index: 0; }
+.cat-tile::before { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 55%; background: linear-gradient(to top, rgba(26,19,16,0.85) 0%, rgba(26,19,16,0.45) 40%, rgba(26,19,16,0) 100%); z-index: 1; pointer-events: none; transition: opacity 0.4s var(--ease-soft); }
+.cat-tile__label, .cat-tile__count { z-index: 3; text-shadow: 0 2px 12px rgba(0,0,0,0.5); }
+.campaign__half { isolation: isolate; }
+.campaign__half > img { z-index: 0; }
+.campaign__half::before { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(26,19,16,0.78) 0%, rgba(26,19,16,0.35) 35%, rgba(26,19,16,0.05) 65%, rgba(26,19,16,0) 100%); z-index: 1; pointer-events: none; transition: opacity 0.5s var(--ease-soft); }
+.campaign__half:hover::before { opacity: 0.85; }
+.campaign__copy { z-index: 2; text-shadow: 0 2px 16px rgba(0,0,0,0.45); }
+.campaign__copy h2, .campaign__copy .kicker { text-shadow: inherit; }
+.community__tile { isolation: isolate; }
+.community__tile > img { z-index: 0; }
+.community__tile span { z-index: 2; text-shadow: 0 1px 6px rgba(0,0,0,0.6); }
+
+.drop-strip { background: var(--ink); color: var(--bone); padding: 1.2rem var(--gutter); display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 1.5rem; max-width: var(--container); margin: 0 auto; }
+.drop-strip__left { display: flex; flex-direction: column; gap: 0.2rem; }
+.drop-strip__left .kicker { color: var(--brass); }
+.drop-strip__name { font-family: var(--font-display); font-size: clamp(1.1rem, 1.6vw, 1.45rem); font-style: italic; letter-spacing: 0.01em; }
+.drop-strip__countdown { display: flex; align-items: center; gap: 0.4rem; font-family: var(--font-mono); justify-self: center; }
+.drop-strip__countdown span { display: inline-flex; flex-direction: column; align-items: center; min-width: 38px; }
+.drop-strip__countdown b { font-size: 1.4rem; font-weight: 500; line-height: 1; }
+.drop-strip__countdown small { font-size: 0.55rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--dust); margin-top: 4px; }
+.drop-strip__countdown .sep { color: var(--brass); font-weight: 500; font-size: 1.2rem; margin: 0 0.1rem; align-self: flex-start; padding-top: 4px; }
+.drop-strip__cta { justify-self: end; font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brass); padding: 0.4rem 0; border-bottom: 1px solid transparent; transition: border-color 0.3s var(--ease-soft); }
+.drop-strip__cta:hover { border-bottom-color: var(--brass); }
+
+.categories { padding: var(--section-y) 0; max-width: var(--container); margin: 0 auto; }
+.categories__grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: clamp(0.75rem, 1.2vw, 1.25rem); padding: 0 var(--gutter); }
+.cat-tile { position: relative; overflow: hidden; aspect-ratio: 3 / 4; border-radius: 2px; background: var(--sand); display: block; --hover-x: 50%; --hover-y: 50%; }
+.cat-tile img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.9) brightness(0.92); transition: transform 0.8s var(--ease-out), filter 0.4s var(--ease-soft); }
+.cat-tile:hover img { transform: scale(1.06); filter: saturate(1) brightness(0.85); }
+.cat-tile__label { position: absolute; left: 0; right: 0; bottom: 2.5rem; text-align: center; font-family: var(--font-display); font-size: clamp(1.15rem, 1.4vw, 1.45rem); font-weight: 500; color: var(--bone); letter-spacing: 0.01em; pointer-events: none; z-index: 2; }
+.cat-tile__count { position: absolute; left: 0; right: 0; bottom: 1rem; text-align: center; font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(245, 240, 232, 0.75); pointer-events: none; z-index: 2; }
+.cat-tile::after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at var(--hover-x) var(--hover-y), rgba(200, 161, 101, 0.45), rgba(26, 19, 16, 0)); opacity: 0; transition: opacity 0.5s var(--ease-award); pointer-events: none; z-index: 1; mix-blend-mode: overlay; }
+.cat-tile:hover::after { opacity: 1; }
+
+.products { padding: var(--section-y) 0; max-width: var(--container); margin: 0 auto; }
+.products--bestsellers { background: var(--paper); max-width: 100%; padding: var(--section-y) 0; }
+.products--bestsellers .products__grid, .products--bestsellers .products__head { max-width: var(--container); margin-left: auto; margin-right: auto; }
+.products__head { display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; margin-bottom: clamp(2rem, 4vw, 3rem); }
+.products__viewall { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brass-deep); white-space: nowrap; padding-bottom: 0.5rem; }
+.products__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(1.25rem, 2vw, 2rem) clamp(1rem, 1.5vw, 1.75rem); padding: 0 var(--gutter); }
+.products__grid--4 { grid-template-columns: repeat(4, 1fr); }
+
+.product { display: flex; flex-direction: column; gap: 0.85rem; }
+.product__media { position: relative; display: block; aspect-ratio: 4 / 5; overflow: hidden; border-radius: 2px; background: var(--sand); }
+.product__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(0.92); transition: opacity 0.45s var(--ease-soft); }
+.product__img--back { opacity: 0; }
+.product__media:hover .product__img--front { opacity: 0; }
+.product__media:hover .product__img--back { opacity: 1; }
+.product__badge { position: absolute; top: 0.85rem; left: 0.85rem; background: var(--bone); color: var(--ink); font-family: var(--font-mono); font-size: 0.62rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; padding: 0.35rem 0.6rem; border-radius: 2px; z-index: 2; }
+.product__badge--new { background: var(--ink); color: var(--brass); }
+.product__badge--limited { background: var(--brass); color: var(--ink); }
+.product__badge--best { background: var(--ink); color: var(--bone); }
+.product__badge--sale { background: var(--terracotta); color: var(--bone); }
+.product__quick { position: absolute; left: 50%; bottom: 1rem; transform: translateX(-50%) translateY(120%); background: var(--ink); color: var(--bone); padding: 0.7rem 1.4rem; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; border-radius: 2px; z-index: 3; transition: transform 0.4s var(--ease-out), background-color 0.3s var(--ease-soft); white-space: nowrap; }
+.product__media:hover .product__quick { transform: translateX(-50%) translateY(0); }
+.product__quick:hover { background: var(--brass-deep); }
+.product__meta { display: flex; flex-direction: column; gap: 0.3rem; }
+.product h3 { font-family: var(--font-body); font-size: 0.92rem; font-weight: 500; letter-spacing: 0.005em; color: var(--ink); }
+.product__price { font-family: var(--font-mono); font-size: 0.85rem; font-weight: 500; color: var(--ink); letter-spacing: 0.01em; }
+.product__price .was { color: var(--dust); text-decoration: line-through; margin-right: 0.5rem; font-weight: 400; }
+.product--sale .product__price { color: var(--terracotta); font-weight: 500; }
+.product__rating { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.04em; color: var(--dust); }
+.product__rating span { color: var(--brass-deep); letter-spacing: 0; margin-right: 0.3rem; }
+.product__swatches { display: flex; gap: 0.35rem; align-items: center; margin-top: 0.2rem; }
+.product__swatches span { width: 14px; height: 14px; border-radius: 50%; border: 1px solid rgba(26, 19, 16, 0.15); cursor: pointer; transition: transform 0.2s var(--ease-soft); }
+.product__swatches span:hover { transform: scale(1.2); }
+.product__swatches-more { font-family: var(--font-mono); font-size: 0.65rem; color: var(--dust); border: 0 !important; background: none !important; width: auto !important; height: auto !important; padding-left: 0.2rem; }
+
+.campaign { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; max-width: var(--container); margin: 0 auto var(--section-y); padding: 0 var(--gutter); }
+.campaign__half { position: relative; overflow: hidden; aspect-ratio: 4 / 5; display: block; border-radius: 2px; }
+.campaign__half img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.92) brightness(0.85); transition: transform 1s var(--ease-out), filter 0.5s var(--ease-soft); }
+.campaign__half:hover img { transform: scale(1.04); filter: saturate(1) brightness(0.78); }
+.campaign__copy { position: absolute; left: 2.5rem; bottom: 2.5rem; color: var(--bone); display: flex; flex-direction: column; gap: 0.5rem; }
+.campaign__copy h2 { font-family: var(--font-display); font-weight: 500; font-size: clamp(2rem, 3.5vw, 3.5rem); letter-spacing: -0.02em; line-height: 1; }
+
+.sale { background: var(--ink); color: var(--bone); padding: var(--section-y) 0; position: relative; }
+.sale__inner { max-width: var(--container); margin: 0 auto; padding: 0 var(--gutter); display: grid; grid-template-columns: 1fr 2fr; gap: clamp(2rem, 5vw, 5rem); align-items: center; }
+.sale__head { display: flex; flex-direction: column; gap: 1rem; align-items: flex-start; }
+.sale__head .btn { margin-top: 1rem; }
+.sale__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+.product--sale h3 { color: var(--bone); }
+.product--sale .product__media { background: rgba(245, 240, 232, 0.08); }
+
+.club { background: var(--paper); padding: var(--section-y) var(--gutter); border-top: 1px solid rgba(26, 19, 16, 0.06); border-bottom: 1px solid rgba(26, 19, 16, 0.06); }
+.club__inner { max-width: 980px; margin: 0 auto; text-align: center; }
+.club__title { font-family: var(--font-display); font-weight: 500; font-size: clamp(2.6rem, 6vw, 5rem); line-height: 0.95; letter-spacing: -0.035em; margin-top: 0.8rem; overflow: hidden; }
+.club__title em { color: var(--brass-deep); font-style: italic; font-weight: 400; }
+.club__lede { margin: 1rem auto 0; max-width: 56ch; font-size: clamp(1rem, 1.15vw, 1.1rem); line-height: 1.55; color: #3d2e25; }
+.club__tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 3rem 0 2.5rem; }
+.tier { background: var(--bone); padding: 2rem 1.5rem; text-align: left; border: 1px solid rgba(26, 19, 16, 0.08); border-radius: 2px; display: flex; flex-direction: column; gap: 0.6rem; transition: transform 0.4s var(--ease-out), border-color 0.3s var(--ease-soft); }
+.tier:hover { transform: translateY(-4px); border-color: rgba(26, 19, 16, 0.18); }
+.tier--top { background: var(--ink); border-color: var(--ink); }
+.tier--top .tier__name { color: var(--brass); }
+.tier--top .tier__perk { color: rgba(245, 240, 232, 0.6); }
+.tier--top .tier__list li { color: rgba(245, 240, 232, 0.85); }
+.tier--top .tier__list li::before { background: var(--brass); }
+.tier__name { font-family: var(--font-display); font-size: 1.6rem; font-weight: 500; letter-spacing: -0.005em; }
+.tier__perk { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--dust); }
+.tier__list { margin-top: 1rem; display: flex; flex-direction: column; gap: 0.55rem; }
+.tier__list li { font-size: 0.9rem; color: #3d2e25; position: relative; padding-left: 1.2rem; line-height: 1.4; }
+.tier__list li::before { content: ""; position: absolute; left: 0; top: 0.55rem; width: 8px; height: 1px; background: var(--brass-deep); }
+
+.community { padding: var(--section-y) 0; max-width: var(--container); margin: 0 auto; }
+.community__grid { display: grid; grid-template-columns: repeat(8, 1fr); gap: 4px; padding: 0 var(--gutter); }
+.community__tile { position: relative; aspect-ratio: 1; overflow: hidden; }
+.community__tile img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.92); transition: transform 0.6s var(--ease-out), filter 0.4s var(--ease-soft); }
+.community__tile:hover img { transform: scale(1.06); filter: saturate(1.05); }
+.community__tile span { position: absolute; left: 0; bottom: 0; right: 0; padding: 0.5rem 0.7rem; background: linear-gradient(to top, rgba(26,19,16,0.7), transparent); color: var(--bone); font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.04em; opacity: 0; transition: opacity 0.3s var(--ease-soft); }
+.community__tile:hover span { opacity: 1; }
+
+.newsletter { padding: var(--section-y) var(--gutter); background: var(--sand); }
+.newsletter__inner { max-width: 720px; margin: 0 auto; text-align: center; }
+.newsletter__title { font-family: var(--font-display); font-weight: 500; font-size: clamp(2.2rem, 4.5vw, 3.6rem); letter-spacing: -0.02em; line-height: 1; overflow: hidden; }
+.newsletter__title em { font-style: italic; color: var(--brass-deep); font-weight: 400; }
+.newsletter__lede { margin-top: 1rem; color: #3d2e25; font-size: 1rem; line-height: 1.55; }
+.newsletter__form { margin-top: 2rem; display: flex; align-items: end; gap: 1rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+.newsletter__label { position: absolute; width: 1px; height: 1px; clip: rect(0 0 0 0); overflow: hidden; }
+.newsletter__form input { flex: 1; padding: 0.9rem 0; background: transparent; border: 0; border-bottom: 1px solid var(--ink); font-size: 1rem; color: var(--ink); outline: none; }
+.newsletter__form input::placeholder { color: var(--dust); }
+.newsletter__form input:focus { border-bottom-color: var(--brass-deep); }
+.newsletter__form button { padding: 0.9rem 1.4rem; background: var(--ink); color: var(--bone); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; transition: background-color 0.3s var(--ease-soft); }
+.newsletter__form button:hover { background: var(--brass-deep); }
+
+.footer { background: var(--ink); color: var(--bone); padding: 5rem var(--gutter) 2rem; }
+.footer__top { max-width: var(--container); margin: 0 auto; display: grid; grid-template-columns: 1.4fr repeat(4, 1fr); gap: 2.5rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(245, 240, 232, 0.12); }
+.footer__brand { display: flex; flex-direction: column; gap: 0.8rem; }
+.footer__wordmark { font-family: var(--font-display); font-size: 2.2rem; font-weight: 500; letter-spacing: 0.04em; }
+.footer__tagline { color: rgba(245, 240, 232, 0.6); font-size: 0.92rem; max-width: 28ch; line-height: 1.5; }
+.footer__col { display: flex; flex-direction: column; gap: 0.7rem; }
+.footer__col-title { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--brass); margin-bottom: 0.5rem; }
+.footer__col a { font-size: 0.9rem; color: rgba(245, 240, 232, 0.75); transition: color 0.3s var(--ease-soft); width: fit-content; }
+.footer__col a:hover { color: var(--bone); }
+.footer__bottom { max-width: var(--container); margin: 2rem auto 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; padding-top: 2rem; }
+.footer__pay { display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; }
+.footer__pay .kicker { color: rgba(245, 240, 232, 0.5); margin-right: 0.5rem; }
+.pay-chip { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.06em; padding: 0.4rem 0.7rem; border: 1px solid rgba(245, 240, 232, 0.18); border-radius: 2px; color: rgba(245, 240, 232, 0.8); }
+.pay-chip--cod { background: var(--brass); color: var(--ink); border-color: var(--brass); font-weight: 500; }
+.footer__legal { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.04em; color: rgba(245, 240, 232, 0.5); }
+
+.loader { position: fixed; inset: 0; z-index: 999; background: var(--ink); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; transition: clip-path 1.1s var(--ease-award), opacity 0.4s ease 0.9s; clip-path: inset(0 0 0 0); }
+.loader.is-done { clip-path: inset(0 0 100% 0); pointer-events: none; }
+.loader__wordmark { font-family: var(--font-display); font-size: clamp(2rem, 6vw, 4.5rem); font-weight: 500; letter-spacing: 0.04em; color: var(--bone); display: flex; overflow: hidden; }
+.loader__wordmark span { display: inline-block; transform: translateY(110%); animation: loaderLetter 0.7s var(--ease-award) forwards; }
+.loader__wordmark span:nth-child(1) { animation-delay: 0.05s; }
+.loader__wordmark span:nth-child(2) { animation-delay: 0.10s; }
+.loader__wordmark span:nth-child(3) { animation-delay: 0.15s; }
+.loader__wordmark span:nth-child(4) { animation-delay: 0.20s; }
+.loader__wordmark span:nth-child(5) { animation-delay: 0.25s; }
+.loader__wordmark span:nth-child(6) { animation-delay: 0.30s; }
+.loader__wordmark span:nth-child(7) { animation-delay: 0.35s; }
+.loader__wordmark span:nth-child(8) { animation-delay: 0.40s; }
+.loader__wordmark span:nth-child(9) { animation-delay: 0.45s; }
+.loader__wordmark span:nth-child(10) { animation-delay: 0.50s; }
+@keyframes loaderLetter { to { transform: translateY(0); } }
+.loader__bar { width: clamp(180px, 22vw, 280px); height: 1px; background: rgba(245, 240, 232, 0.18); overflow: hidden; }
+.loader__bar-fill { width: 100%; height: 100%; background: var(--brass); transform: translateX(-100%); animation: loaderBar 0.9s var(--ease-award) 0.5s forwards; }
+@keyframes loaderBar { to { transform: translateX(0); } }
+
+.cursor { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; transform: translate3d(-100px, -100px, 0); display: flex; align-items: center; justify-content: center; mix-blend-mode: difference; transition: opacity 0.2s ease; opacity: 0; }
+.cursor.is-active { opacity: 1; }
+.cursor__dot { width: 8px; height: 8px; border-radius: 50%; background: var(--bone); transition: width 0.4s var(--ease-snap), height 0.4s var(--ease-snap); }
+.cursor.is-hover .cursor__dot { width: 80px; height: 80px; background: var(--brass); }
+.cursor__label { position: absolute; font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink); font-weight: 600; opacity: 0; transform: scale(0.8); transition: opacity 0.3s ease, transform 0.3s var(--ease-snap); white-space: nowrap; }
+.cursor.is-hover .cursor__label { opacity: 1; transform: scale(1); }
+@media (hover: hover) and (pointer: fine) { body.cursor-ready, body.cursor-ready * { cursor: none !important; } a, button, [data-cursor] { cursor: none; } }
+
+.noise { position: fixed; inset: -50%; width: 200%; height: 200%; pointer-events: none; z-index: 1000; opacity: 0.035; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>"); animation: noiseShift 0.6s steps(6) infinite; mix-blend-mode: multiply; }
+@keyframes noiseShift { 0% { transform: translate(0, 0); } 20% { transform: translate(-8%, 4%); } 40% { transform: translate(6%, -3%); } 60% { transform: translate(-4%, 7%); } 80% { transform: translate(5%, 2%); } 100% { transform: translate(0, 0); } }
+
+.marquee { background: var(--bone); color: var(--ink); overflow: hidden; padding: 0.75rem 0; border-bottom: 1px solid rgba(26, 19, 16, 0.08); position: relative; }
+.marquee::before, .marquee::after { content: ""; position: absolute; top: 0; bottom: 0; width: 80px; z-index: 2; pointer-events: none; }
+.marquee::before { left: 0; background: linear-gradient(to right, var(--bone), transparent); }
+.marquee::after { right: 0; background: linear-gradient(to left, var(--bone), transparent); }
+.marquee__track { display: inline-flex; align-items: center; gap: 2.5rem; white-space: nowrap; animation: marqueeScroll 50s linear infinite; will-change: transform; }
+.marquee:hover .marquee__track { animation-play-state: paused; }
+.marquee__item { font-family: var(--font-display); font-style: italic; font-size: clamp(1rem, 1.4vw, 1.4rem); font-weight: 500; letter-spacing: -0.01em; }
+.marquee__star { color: var(--brass-deep); font-size: 0.85rem; display: inline-block; animation: starSpin 6s linear infinite; }
+@keyframes marqueeScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes starSpin { to { transform: rotate(360deg); } }
+
+.split-line { display: block; overflow: hidden; line-height: 1.06; padding-bottom: 0.03em; }
+.split-word { display: inline-block; transform: translateY(110%); transition: transform 0.95s var(--ease-award); will-change: transform; }
+.is-revealed .split-word { transform: translateY(0); }
+.split-word:nth-child(2) { transition-delay: 0.05s; }
+.split-word:nth-child(3) { transition-delay: 0.10s; }
+.split-word:nth-child(4) { transition-delay: 0.15s; }
+.split-word:nth-child(5) { transition-delay: 0.20s; }
+.split-word:nth-child(6) { transition-delay: 0.25s; }
+.split-word:nth-child(7) { transition-delay: 0.30s; }
+.split-word:nth-child(8) { transition-delay: 0.35s; }
+
+.reveal-img { position: relative; overflow: hidden; }
+.reveal-img::after { content: ""; position: absolute; inset: 0; background: var(--ink); transform: scaleX(1); transform-origin: right center; transition: transform 1.2s var(--ease-award); z-index: 4; pointer-events: none; }
+.reveal-img.is-revealed::after { transform: scaleX(0); }
+.reveal-img > img, .reveal-img > picture { transform: scale(1.18); transition: transform 1.4s var(--ease-award); }
+.reveal-img.is-revealed > img, .reveal-img.is-revealed > picture { transform: scale(1); }
+
+.section-head, .section-lede, .products__head, .club__lede, .club__tiers, .newsletter__lede, .newsletter__form, .hero__sub, .hero__cta, .hero__credit { opacity: 0; transform: translateY(28px); transition: opacity 0.9s var(--ease-award), transform 0.9s var(--ease-award); }
+.is-revealed .section-head, .is-revealed .section-lede, .is-revealed .products__head, .is-revealed .club__lede, .is-revealed .club__tiers, .is-revealed .newsletter__lede, .is-revealed .newsletter__form, .hero.is-revealed .hero__sub, .hero.is-revealed .hero__cta, .hero.is-revealed .hero__credit { opacity: 1; transform: translateY(0); transition-delay: 0.15s; }
+.hero.is-revealed .hero__sub { transition-delay: 0.5s; }
+.hero.is-revealed .hero__cta { transition-delay: 0.65s; }
+.hero.is-revealed .hero__credit { transition-delay: 0.8s; }
+
+.product, .cat-tile, .tier, .community__tile { opacity: 0; transform: translateY(36px); transition: opacity 0.8s var(--ease-award), transform 0.8s var(--ease-award); }
+.is-revealed.product, .is-revealed.cat-tile, .is-revealed.tier, .is-revealed.community__tile { opacity: 1; transform: translateY(0); }
+
+.bottom-nav, .search-drawer, .back-to-top { display: none; }
+
+@media (max-width: 1100px) {
+  .header__nav--primary { gap: 1.2rem; }
+  .categories__grid { grid-template-columns: repeat(3, 1fr); }
+  .products__grid, .products__grid--4 { grid-template-columns: repeat(3, 1fr); }
+  .club__tiers { grid-template-columns: 1fr; max-width: 500px; margin-left: auto; margin-right: auto; }
+  .sale__inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .footer__top { grid-template-columns: 1fr 1fr; }
+  .footer__brand { grid-column: span 2; }
+  .community__grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (max-width: 768px) {
+  :root { --gutter: 1rem; --section-y: 3rem; }
+  body { padding-bottom: 72px; }
+  .utility-bar { font-size: 0.6rem; }
+  .utility-bar__inner { gap: 0.3rem 0.6rem; padding: 0.45rem var(--gutter); justify-content: flex-start; }
+  .utility-bar .sep { display: none; }
+  .utility-bar__inner > span:not(:first-child):not(:nth-child(3)) { display: none; }
+
+  .marquee { padding: 0.55rem 0; }
+  .marquee__item { font-size: 0.95rem; }
+  .marquee__track { animation-duration: 35s; gap: 1.5rem; }
+  .marquee::before, .marquee::after { width: 30px; }
+
+  .header { grid-template-columns: auto 1fr auto; padding: 0.7rem var(--gutter); transition: padding 0.35s var(--ease-soft), transform 0.45s var(--ease-soft); }
+  .header.is-condensed { padding: 0.45rem var(--gutter); }
+  .header.is-condensed .header__wordmark { font-size: 1.15rem; }
+  .header.is-hidden { transform: translateY(-100%); }
+  .header__nav--primary { display: none; }
+  .header__menu-toggle { display: flex; flex-direction: column; gap: 4px; width: 44px; height: 44px; padding: 11px 10px; align-items: flex-start; justify-content: center; }
+  .header__menu-toggle span { width: 22px; height: 1.5px; background: var(--ink); transition: transform 0.3s var(--ease-soft), opacity 0.3s var(--ease-soft); }
+  .header__menu-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(5.5px) rotate(45deg); }
+  .header__menu-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .header__menu-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-5.5px) rotate(-45deg); }
+  .header__wordmark { font-size: 1.4rem; transition: font-size 0.35s var(--ease-soft); }
+  .header__actions { gap: 0.1rem; }
+  .header__actions a:not(.cart-btn), .header__actions .icon-btn { width: 40px; height: 40px; }
+  .header__actions .icon-btn:nth-of-type(3), .header__actions .cart-btn { display: none; }
+
+  .mobile-nav { padding: 0; background: var(--bone); background-image: radial-gradient(circle at 100% 0%, rgba(200,161,101,0.10), transparent 55%), radial-gradient(circle at 0% 100%, rgba(168,52,28,0.06), transparent 55%); }
+  .mobile-nav__inner { padding: 5rem 1.25rem 1.5rem; display: flex; flex-direction: column; gap: 1.5rem; height: 100%; overflow-y: auto; }
+
+  .mobile-nav__depts { display: flex; flex-direction: column; border-top: 1px solid rgba(26,19,16,0.1); }
+  .dept-link { display: grid; grid-template-columns: auto 1fr auto auto; align-items: baseline; column-gap: 1rem; padding: 1.1rem 0.25rem 1.1rem 0.5rem; border-bottom: 1px solid rgba(26,19,16,0.1); position: relative; overflow: hidden; transition: padding-left 0.5s var(--ease-snap); }
+  .dept-link::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--brass); transform: scaleY(0); transform-origin: top center; transition: transform 0.45s var(--ease-snap); }
+  .dept-link:hover, .dept-link:active { padding-left: 1rem; }
+  .dept-link:hover::before, .dept-link:active::before { transform: scaleY(1); }
+  .dept-link__index { font-family: var(--font-mono); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.12em; color: var(--brass-deep); align-self: center; }
+  .dept-link__name { font-family: var(--font-display); font-size: clamp(2rem, 9vw, 2.4rem); font-weight: 500; letter-spacing: -0.025em; line-height: 1; color: var(--ink); }
+  .dept-link__count { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--dust); align-self: center; }
+  .dept-link__arrow { width: 18px; height: 18px; color: var(--ink); align-self: center; transition: transform 0.45s var(--ease-snap); }
+  .dept-link:hover .dept-link__arrow, .dept-link:active .dept-link__arrow { transform: translateX(4px); color: var(--brass-deep); }
+
+  .mn-feature { position: relative; display: block; aspect-ratio: 5/3; overflow: hidden; border-radius: 3px; isolation: isolate; background: var(--sand); transition: transform 0.5s var(--ease-snap); }
+  .mn-feature:active { transform: scale(0.98); }
+  .mn-feature img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.95) brightness(0.78); transition: transform 1.2s var(--ease-out); }
+  .mn-feature:active img { transform: scale(1.05); }
+  .mn-feature::before { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(26,19,16,0.88) 0%, rgba(26,19,16,0.35) 50%, rgba(26,19,16,0.05) 100%); z-index: 1; pointer-events: none; }
+  .mn-feature::after { content: ""; position: absolute; top: 1rem; right: 1rem; width: 8px; height: 8px; background: var(--brass); border-radius: 50%; z-index: 3; box-shadow: 0 0 0 0 rgba(200,161,101,0.6); animation: brassPulse 2.4s var(--ease-soft) infinite; }
+  @keyframes brassPulse { 0% { box-shadow: 0 0 0 0 rgba(200,161,101,0.7); } 70% { box-shadow: 0 0 0 10px rgba(200,161,101,0); } 100% { box-shadow: 0 0 0 0 rgba(200,161,101,0); } }
+  .mn-feature__copy { position: absolute; left: 1.25rem; right: 1.25rem; bottom: 1.1rem; z-index: 2; color: var(--bone); text-shadow: 0 2px 14px rgba(0,0,0,0.5); }
+  .mn-feature__copy .kicker { color: var(--brass); }
+  .mn-feature__title { font-family: var(--font-display); font-size: 1.85rem; font-weight: 500; letter-spacing: -0.02em; line-height: 1; margin-top: 0.4rem; }
+  .mn-feature__title em { font-style: italic; color: var(--brass); font-weight: 400; }
+  .mn-feature__cta { display: inline-block; margin-top: 0.7rem; font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.16em; text-transform: uppercase; border-bottom: 1px solid var(--brass); padding-bottom: 3px; color: var(--brass); }
+
+  .mobile-nav__section { display: flex; flex-direction: column; }
+  .mobile-nav__section-title { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--dust); margin-bottom: 0.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(26,19,16,0.08); }
+  .discover-link { display: flex; align-items: center; justify-content: space-between; padding: 0.9rem 0.25rem; border-bottom: 1px solid rgba(26,19,16,0.06); transition: padding-left 0.4s var(--ease-snap); }
+  .discover-link:active { padding-left: 0.5rem; }
+  .discover-link__name { font-family: var(--font-display); font-size: 1.3rem; font-weight: 500; letter-spacing: -0.01em; color: var(--ink); }
+  .discover-link__badge { font-family: var(--font-mono); font-size: 0.6rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; padding: 0.35rem 0.75rem; border-radius: 99px; background: rgba(26,19,16,0.06); color: var(--ink); }
+  .discover-link__badge--brass { background: var(--brass); color: var(--ink); }
+  .discover-link--sale .discover-link__name { color: var(--terracotta); }
+  .discover-link--sale .discover-link__badge { background: var(--terracotta); color: var(--bone); }
+
+  .mobile-nav__quick { display: flex; flex-direction: column; gap: 0.15rem; padding: 0.75rem 0.5rem; background: var(--paper); border: 1px solid rgba(26,19,16,0.06); border-radius: 3px; }
+  .quick-action { display: flex; align-items: center; gap: 0.9rem; padding: 0.8rem 0.6rem; border-radius: 2px; position: relative; transition: background 0.3s ease; }
+  .quick-action:active { background: rgba(26,19,16,0.04); }
+  .quick-action > svg { width: 22px; height: 22px; flex-shrink: 0; color: var(--ink); }
+  .quick-action--whatsapp > svg { color: #25D366; width: 24px; height: 24px; }
+  .quick-action__text { display: flex; flex-direction: column; gap: 2px; flex: 1; }
+  .quick-action__name { font-family: var(--font-body); font-weight: 500; font-size: 0.95rem; color: var(--ink); letter-spacing: 0.005em; }
+  .quick-action__text em { font-style: normal; font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.1em; color: var(--dust); text-transform: uppercase; }
+  .quick-action__pulse { width: 8px; height: 8px; border-radius: 50%; background: #25D366; flex-shrink: 0; box-shadow: 0 0 0 0 rgba(37,211,102,0.5); animation: pulseGreen 2s infinite; }
+  @keyframes pulseGreen { 0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.6); } 70% { box-shadow: 0 0 0 8px rgba(37,211,102,0); } 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); } }
+
+  .mobile-nav__footer { margin-top: auto; padding-top: 1.25rem; border-top: 1px solid rgba(26,19,16,0.1); display: flex; flex-direction: column; gap: 1rem; align-items: center; }
+  .mobile-nav__social { display: flex; gap: 0.55rem; }
+  .mobile-nav__social a { width: 42px; height: 42px; border: 1px solid rgba(26,19,16,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--ink); transition: background 0.3s ease, color 0.3s ease, transform 0.3s var(--ease-snap), border-color 0.3s ease; }
+  .mobile-nav__social a:hover, .mobile-nav__social a:active { background: var(--ink); color: var(--bone); border-color: var(--ink); transform: scale(0.96); }
+  .mobile-nav__social svg { width: 17px; height: 17px; }
+  .mobile-nav__legal { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--dust); }
+
+  .hero { display: block; padding: 0; margin: 0; position: relative; }
+  .hero__image { width: 100%; height: 85vh; margin: 0; }
+  .hero__image img { height: 100%; }
+  .hero__image-caption { display: none; }
+  .hero__copy { position: absolute; top: 1.5rem; bottom: 1.5rem; left: 1.25rem; right: 1.25rem; padding: 0; color: var(--bone); z-index: 3; display: flex; flex-direction: column; text-shadow: 0 3px 36px rgba(0,0,0,0.7), 0 1px 4px rgba(0,0,0,0.5); }
+  .hero__copy .kicker { color: var(--brass); }
+  .hero__title { color: var(--bone); font-size: clamp(3.2rem, 16vw, 5rem); margin-top: 0.6rem; text-shadow: 0 4px 30px rgba(0,0,0,0.65), 0 2px 8px rgba(0,0,0,0.5); }
+  .hero__title em { color: var(--brass); }
+  .hero__sub, .hero__credit { display: none; }
+  .hero__cta { position: static; margin: auto 0 0; flex-direction: column; gap: 0.7rem; }
+  .hero__cta .btn { width: 100%; justify-content: center; padding: 1.1rem; font-size: 0.78rem; }
+  .hero__cta .btn--primary { background: var(--bone); color: var(--ink); border-color: var(--bone); box-shadow: 0 4px 20px rgba(0,0,0,0.18); }
+  .hero__cta .btn--outline { background: rgba(245,240,232,0.18); backdrop-filter: blur(14px) saturate(1.2); -webkit-backdrop-filter: blur(14px) saturate(1.2); color: var(--bone); border-color: rgba(245,240,232,0.55); }
+  .hero__image::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 45%; background: linear-gradient(to top, rgba(26,19,16,0.75) 0%, rgba(26,19,16,0.35) 50%, rgba(26,19,16,0) 100%); z-index: 1; pointer-events: none; }
+  .cat-tile__label { text-shadow: 0 2px 14px rgba(0,0,0,0.65); }
+  .cat-tile img { filter: saturate(0.9) brightness(0.85); }
+  .campaign__half img { filter: saturate(0.92) brightness(0.78); }
+
+  .drop-strip { grid-template-columns: 1fr; text-align: center; gap: 0.7rem; padding: 1rem var(--gutter); }
+  .drop-strip__left { align-items: center; }
+  .drop-strip__cta, .drop-strip__countdown { justify-self: center; }
+  .drop-strip__countdown b { font-size: 1.15rem; }
+
+  .section-head { margin-bottom: 1.5rem; }
+  .section-title { font-size: clamp(2.2rem, 9vw, 3.2rem); }
+  .section-lede { font-size: 0.95rem; }
+  .products__head { flex-direction: row; align-items: flex-end; justify-content: space-between; gap: 1rem; }
+  .products__viewall { font-size: 0.7rem; }
+
+  .categories { padding: var(--section-y) 0 1.5rem; }
+  .categories__grid { grid-template-columns: repeat(2, 1fr); gap: 0.5rem; }
+  .cat-tile { aspect-ratio: 4 / 5; }
+  .cat-tile__label { font-size: 1.25rem; bottom: 2rem; }
+  .cat-tile__count { font-size: 0.6rem; bottom: 0.9rem; }
+
+  .products { padding: 2rem 0; max-width: 100%; }
+  .products--bestsellers { padding: 2.5rem 0; }
+  .products__head { padding: 0 var(--gutter); }
+  .products__grid, .products__grid--4 { display: flex; flex-wrap: nowrap; grid-template-columns: none; padding: 0 var(--gutter); gap: 0.8rem; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .products__grid::-webkit-scrollbar, .products__grid--4::-webkit-scrollbar { display: none; }
+  .products__grid .product, .products__grid--4 .product { flex: 0 0 70vw; scroll-snap-align: start; max-width: 280px; }
+
+  .product { gap: 0.6rem; opacity: 1 !important; transform: none !important; }
+  .product__media { aspect-ratio: 4 / 5; }
+  .product__quick { display: block; position: static; transform: none; width: 100%; margin-top: 0.4rem; padding: 0.85rem; background: var(--ink); color: var(--bone); font-size: 0.7rem; border-radius: 2px; }
+  .product__media .product__quick { display: none; }
+  .product__meta { gap: 0.25rem; }
+  .product h3 { font-size: 0.85rem; line-height: 1.3; }
+  .product__price { font-size: 0.82rem; }
+  .product__rating { font-size: 0.68rem; }
+  .product__swatches span { width: 12px; height: 12px; }
+
+  .cat-tile img, .product__img, .campaign__half img, .community__tile img, .hero__image img { transition: none; }
+  .product__media:hover .product__img--front { opacity: 1; }
+  .product__media:hover .product__img--back { opacity: 0; }
+
+  .campaign { grid-template-columns: 1fr; gap: 0.5rem; padding: 0 var(--gutter); margin-bottom: 2rem; }
+  .campaign__half { aspect-ratio: 4 / 5; }
+  .campaign__copy { left: 1.25rem; bottom: 1.25rem; }
+  .campaign__copy h2 { font-size: 2rem; }
+
+  .sale__inner { grid-template-columns: 1fr; gap: 1.5rem; padding: 0; }
+  .sale__head { padding: 0 var(--gutter); text-align: left; align-items: flex-start; }
+  .sale__head .section-title { font-size: 2.4rem; }
+  .sale__head .btn { width: auto; padding: 1rem 1.5rem; margin-top: 0.5rem; }
+  .sale__grid { grid-template-columns: none; display: flex; flex-wrap: nowrap; gap: 0.8rem; padding: 0 var(--gutter); overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .sale__grid::-webkit-scrollbar { display: none; }
+  .sale__grid .product { flex: 0 0 65vw; max-width: 260px; scroll-snap-align: start; }
+
+  .club__tiers { grid-template-columns: 1fr; gap: 0.7rem; margin: 2.5rem 0 2rem; }
+  .tier { padding: 1.5rem 1.25rem; }
+  .tier__name { font-size: 1.35rem; }
+  .club__title { font-size: 2.4rem; }
+  .club__lede { font-size: 0.95rem; }
+
+  .community__grid { grid-template-columns: repeat(3, 1fr); gap: 2px; }
+  .community__tile span { font-size: 0.6rem; padding: 0.3rem 0.4rem; }
+
+  .newsletter__title { font-size: 2rem; }
+  .newsletter__form { flex-direction: column; gap: 0.8rem; align-items: stretch; }
+  .newsletter__form button { width: 100%; padding: 1.1rem; }
+  .newsletter__form input { padding: 1rem 0; }
+
+  .footer { padding: 3rem var(--gutter) 1.5rem; }
+  .footer__top { grid-template-columns: 1fr; gap: 1.8rem; padding-bottom: 2rem; }
+  .footer__brand { grid-column: span 1; }
+  .footer__wordmark { font-size: 1.8rem; }
+  .footer__col { gap: 0.4rem; }
+  .footer__col a { padding: 0.4rem 0; font-size: 0.95rem; }
+  .footer__bottom { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .footer__pay .pay-chip { font-size: 0.65rem; padding: 0.3rem 0.55rem; }
+
+  .cursor { display: none; }
+  body.cursor-ready, body.cursor-ready * { cursor: auto !important; }
+  .noise { opacity: 0.02; animation-duration: 1.2s; }
+  .reveal-img > img { transform: none; }
+  .reveal-img::after { transition-duration: 0.6s; }
+  .split-word { transition-duration: 0.6s; }
+
+  .bottom-nav { display: grid; grid-template-columns: repeat(5, 1fr); position: fixed; left: 0; right: 0; bottom: 0; z-index: 90; background: rgba(245, 240, 232, 0.96); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-top: 1px solid rgba(26, 19, 16, 0.1); padding: 0.4rem 0 max(0.4rem, env(safe-area-inset-bottom)); align-items: center; }
+  .bottom-nav__item { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.2rem; padding: 0.5rem 0.25rem; min-height: 56px; color: var(--dust); font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.3s var(--ease-soft); }
+  .bottom-nav__item svg { width: 22px; height: 22px; stroke-width: 1.5; }
+  .bottom-nav__item.is-active { color: var(--ink); }
+  .bottom-nav__item--center { position: relative; transform: translateY(-12px); background: none; }
+  .bottom-nav__search { width: 52px; height: 52px; border-radius: 50%; background: var(--ink); color: var(--bone); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 18px rgba(26, 19, 16, 0.25); transition: transform 0.3s var(--ease-snap), background 0.3s ease; }
+  .bottom-nav__search svg { width: 22px; height: 22px; }
+  .bottom-nav__item--center:active .bottom-nav__search { transform: scale(0.92); background: var(--brass-deep); }
+  .bottom-nav__item--center span { color: var(--ink); margin-top: 6px; }
+  .bottom-nav__bag { position: relative; display: inline-flex; }
+  .bottom-nav__count { position: absolute; top: -4px; right: -8px; font-style: normal; font-family: var(--font-mono); font-size: 0.55rem; background: var(--terracotta); color: var(--bone); width: 16px; height: 16px; border-radius: 50%; display: flex; align-items: center; justify-content: center; letter-spacing: 0; }
+
+  .search-drawer { display: flex; flex-direction: column; position: fixed; top: 0; left: 0; right: 0; height: 100%; background: var(--bone); z-index: 110; transform: translateY(-100%); transition: transform 0.5s var(--ease-award); }
+  .search-drawer:not([hidden]) { transform: translateY(0); }
+  .search-drawer[hidden] { display: flex; pointer-events: none; }
+  .search-drawer__head { display: flex; align-items: center; gap: 0.8rem; padding: 1rem 1rem 0.8rem; border-bottom: 1px solid rgba(26, 19, 16, 0.08); }
+  .search-drawer__input { flex: 1; padding: 0.8rem 1rem; border: 1px solid rgba(26, 19, 16, 0.12); border-radius: 2px; background: var(--paper); font-size: 0.95rem; color: var(--ink); outline: none; }
+  .search-drawer__input:focus { border-color: var(--ink); }
+  .search-drawer__close { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brass-deep); padding: 0.5rem 0.3rem; }
+  .search-drawer__body { padding: 1.5rem 1rem; overflow-y: auto; flex: 1; }
+  .search-drawer__body .kicker { margin-top: 1.5rem; margin-bottom: 0.8rem; display: block; }
+  .search-drawer__body .kicker:first-child { margin-top: 0; }
+  .search-drawer__chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .search-drawer__chips a { padding: 0.55rem 0.9rem; background: var(--bone); border: 1px solid rgba(26, 19, 16, 0.12); border-radius: 99px; font-size: 0.82rem; color: var(--ink); transition: background 0.2s ease; }
+  .search-drawer__chips a:active { background: var(--sand); }
+  .search-drawer__trending { display: flex; flex-direction: column; gap: 0.6rem; }
+  .search-drawer__trending .trend { display: flex; align-items: center; gap: 0.9rem; padding: 0.5rem; border: 1px solid rgba(26, 19, 16, 0.06); border-radius: 2px; background: var(--paper); }
+  .search-drawer__trending .trend img { width: 60px; height: 60px; object-fit: cover; flex-shrink: 0; }
+  .search-drawer__trending .trend span { font-size: 0.88rem; color: var(--ink); flex: 1; }
+
+  .back-to-top { display: flex; align-items: center; justify-content: center; position: fixed; right: 1rem; bottom: calc(72px + max(0.5rem, env(safe-area-inset-bottom))); width: 44px; height: 44px; border-radius: 50%; background: var(--ink); color: var(--bone); z-index: 80; box-shadow: 0 4px 14px rgba(26, 19, 16, 0.2); opacity: 0; transform: translateY(20px) scale(0.85); pointer-events: none; transition: opacity 0.3s var(--ease-soft), transform 0.4s var(--ease-snap); }
+  .back-to-top.is-visible { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
+  .back-to-top svg { width: 18px; height: 18px; }
+  .loader__wordmark { font-size: 1.9rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+  .loader, .cursor, .noise, .marquee__track, .marquee__star { display: none !important; }
+  .split-word { transform: none !important; }
+  .reveal-img::after { display: none; }
+  .reveal-img > img { transform: none !important; }
+  .product, .cat-tile, .tier, .community__tile, .section-head, .section-lede, .products__head, .hero__sub, .hero__cta { opacity: 1 !important; transform: none !important; }
+}
+  </style>
+</head>
+<body>
+
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__wordmark">
+      <span>O</span><span>U</span><span>T</span><span>F</span><span>I</span><span>T</span><span>T</span><span>E</span><span>R</span><span>S</span>
+    </div>
+    <div class="loader__bar"><div class="loader__bar-fill"></div></div>
+  </div>
+
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <span class="cursor__dot"></span>
+    <span class="cursor__label" id="cursor-label"></span>
+  </div>
+
+  <div class="noise" aria-hidden="true"></div>
+
+  <div class="utility-bar" role="region" aria-label="Site announcements">
+    <div class="utility-bar__inner">
+      <span>Free shipping over PKR 5,000</span>
+      <span class="sep" aria-hidden="true">·</span>
+      <span>Cash on Delivery</span>
+      <span class="sep" aria-hidden="true">·</span>
+      <span><strong>2-day delivery</strong> in Lahore, Karachi, Islamabad</span>
+      <span class="sep" aria-hidden="true">·</span>
+      <span>Pay in 3 with BaadMay</span>
+    </div>
+  </div>
+
+  <div class="marquee" aria-label="Brand statements">
+    <div class="marquee__track">
+      <span class="marquee__item">Pause Collection · Out Now</span>
+      <span class="marquee__star" aria-hidden="true">&#10022;</span>
+      <span class="marquee__item">Free Express Shipping on Orders over PKR 5,000</span>
+      <span class="marquee__star" aria-hidden="true">&#10022;</span>
+      <span class="marquee__item">14-Day Returns</span>
+      <span class="marquee__star" aria-hidden="true">&#10022;</span>
+      <span class="marquee__item">Cash on Delivery</span>
+      <span class="marquee__star" aria-hidden="true">&#10022;</span>
+      <span class="marquee__item">Pay in 3 with BaadMay</span>
+      <span class="marquee__star" aria-hidden="true">&#10022;</span>
+      <span class="marquee__item">Artisanal Collection — Coming Soon</span>
+      <span class="marquee__star" aria-hidden="true">&#10022;</span>
+      <span class="marquee__item">Pause Collection · Out Now</span>
+      <span class="marquee__star" aria-hidden="true">&#10022;</span>
+      <span class="marquee__item">Free Express Shipping on Orders over PKR 5,000</span>
+      <span class="marquee__star" aria-hidden="true">&#10022;</span>
+      <span class="marquee__item">14-Day Returns</span>
+      <span class="marquee__star" aria-hidden="true">&#10022;</span>
+      <span class="marquee__item">Cash on Delivery</span>
+      <span class="marquee__star" aria-hidden="true">&#10022;</span>
+      <span class="marquee__item">Pay in 3 with BaadMay</span>
+      <span class="marquee__star" aria-hidden="true">&#10022;</span>
+      <span class="marquee__item">Artisanal Collection — Coming Soon</span>
+      <span class="marquee__star" aria-hidden="true">&#10022;</span>
+    </div>
+  </div>
+
+  <header class="header" id="site-header">
+    <button class="header__menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="header__nav header__nav--primary" aria-label="Primary">
+      <a href="#men">Men</a><a href="#women">Women</a><a href="#juniors">Juniors</a>
+      <a href="#new-in">New In</a><a href="#sale" class="header__nav-sale">Last Chance</a>
+    </nav>
+    <a class="header__wordmark" href="#" aria-label="Outfitters home">Outfitters</a>
+    <div class="header__actions">
+      <button class="icon-btn" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+      <a class="icon-btn" href="https://wa.me/" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 21l1.7-5.1A8 8 0 1 1 9 20.4L3 21z"/><path d="M8 11c.5 2 2 3.5 4 4l1.5-1 2.5 1.2.5-2.2L15 11.5 14 9l-2.2.5L11 8c-1-.4-2-.4-3 0z"/></svg></a>
+      <a class="icon-btn" href="#account" aria-label="Account"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c1-3.5 4-5 7-5s6 1.5 7 5"/></svg></a>
+      <a class="cart-btn" href="#cart" aria-label="Cart, 0 items">Bag <sup>(0)</sup></a>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobile-nav" hidden>
+    <div class="mobile-nav__inner">
+
+      <nav class="mobile-nav__depts" aria-label="Shop by department">
+        <a href="#men" class="dept-link">
+          <span class="dept-link__index">01</span>
+          <span class="dept-link__name">Men</span>
+          <span class="dept-link__count">812 pieces</span>
+          <svg class="dept-link__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+        </a>
+        <a href="#women" class="dept-link">
+          <span class="dept-link__index">02</span>
+          <span class="dept-link__name">Women</span>
+          <span class="dept-link__count">654 pieces</span>
+          <svg class="dept-link__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+        </a>
+        <a href="#juniors" class="dept-link">
+          <span class="dept-link__index">03</span>
+          <span class="dept-link__name">Juniors</span>
+          <span class="dept-link__count">284 pieces</span>
+          <svg class="dept-link__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+        </a>
+      </nav>
+
+      <a href="#pause" class="mn-feature">
+        <img src="https://outfitters.com.pk/cdn/shop/files/Pause-Menu_tile-men.jpg?width=800" alt="Pause Collection campaign" />
+        <div class="mn-feature__copy">
+          <p class="kicker">Out Now &middot; New Drop</p>
+          <h3 class="mn-feature__title">The <em>Pause</em> Edit</h3>
+          <span class="mn-feature__cta">Shop the campaign &rarr;</span>
+        </div>
+      </a>
+
+      <nav class="mobile-nav__section" aria-label="Discover">
+        <p class="mobile-nav__section-title">Discover</p>
+        <a href="#new-in" class="discover-link">
+          <span class="discover-link__name">New In</span>
+          <span class="discover-link__badge">240 new</span>
+        </a>
+        <a href="#sale" class="discover-link discover-link--sale">
+          <span class="discover-link__name">Last Chance</span>
+          <span class="discover-link__badge">Up to &minus;50%</span>
+        </a>
+        <a href="#otr" class="discover-link">
+          <span class="discover-link__name">OTR Club</span>
+          <span class="discover-link__badge discover-link__badge--brass">Loyalty</span>
+        </a>
+      </nav>
+
+      <div class="mobile-nav__quick">
+        <a href="https://wa.me/" class="quick-action quick-action--whatsapp">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0c-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1s0-.4.1-.6c.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5-.1-.2-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5s-.4 0-.6 0c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.2 3.4 5.3 4.7 1.9.8 2.6.9 3.5.8.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4z M12 2C6.5 2 2 6.5 2 12c0 1.7.5 3.4 1.3 4.8L2 22l5.4-1.3c1.4.8 3 1.3 4.6 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.5 0-2.9-.4-4.2-1.1l-.3-.2-3.2.8.9-3.1-.2-.3C4.4 14.8 4 13.4 4 12c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8z"/></svg>
+          <div class="quick-action__text">
+            <span class="quick-action__name">WhatsApp Concierge</span>
+            <em>Online &middot; Replies in 5 min</em>
+          </div>
+          <span class="quick-action__pulse" aria-hidden="true"></span>
+        </a>
+        <a href="#orders" class="quick-action">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/></svg>
+          <div class="quick-action__text"><span class="quick-action__name">Track Your Order</span></div>
+        </a>
+        <a href="#account" class="quick-action">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c1-3.5 4-5 7-5s6 1.5 7 5"/></svg>
+          <div class="quick-action__text"><span class="quick-action__name">Sign In / Register</span></div>
+        </a>
+      </div>
+
+      <div class="mobile-nav__footer">
+        <div class="mobile-nav__social" aria-label="Follow Outfitters">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 4v2a4 4 0 0 0 4 4"/><path d="M16 4v10a4 4 0 1 1-4-4"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2.5" y="6" width="19" height="12" rx="3"/><path d="m10 9.5 5 2.5-5 2.5z" fill="currentColor"/></svg></a>
+          <a href="https://wa.me/" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21l1.7-5.1A8 8 0 1 1 9 20.4L3 21z"/></svg></a>
+        </div>
+        <p class="mobile-nav__legal">&copy; 2026 Outfitters &middot; Pakistan</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="search-drawer" id="search-drawer" hidden>
+    <div class="search-drawer__head">
+      <input type="search" placeholder="Search shirts, denim, accessories…" class="search-drawer__input" />
+      <button class="search-drawer__close" id="search-close" aria-label="Close search">Cancel</button>
+    </div>
+    <div class="search-drawer__body">
+      <p class="kicker">Popular searches</p>
+      <div class="search-drawer__chips">
+        <a href="#">Striped shirt</a><a href="#">Pause collection</a><a href="#">Slim denim</a>
+        <a href="#">Embroidered tee</a><a href="#">Suede slides</a><a href="#">Cargo pants</a>
+      </div>
+      <p class="kicker">Trending</p>
+      <div class="search-drawer__trending">
+        <a href="#" class="trend"><img src="https://outfitters.com.pk/cdn/shop/files/F1074103901.jpg?width=300" alt="" /><span>Striped Shirt · PKR 5,490</span></a>
+        <a href="#" class="trend"><img src="https://outfitters.com.pk/cdn/shop/files/F0395112901_5.jpg?width=300" alt="" /><span>Multi-Piece Sneakers · PKR 8,490</span></a>
+        <a href="#" class="trend"><img src="https://outfitters.com.pk/cdn/shop/files/F0527203326_c60cfc6c-edea-43fc-a22a-f9edd464a373.jpg?width=300" alt="" /><span>Cropped Embroidered Shirt · PKR 5,990</span></a>
+      </div>
+    </div>
+  </div>
+
+  <nav class="bottom-nav" aria-label="Mobile primary">
+    <a href="#" class="bottom-nav__item is-active" aria-label="Home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span>Home</span></a>
+    <a href="#shop" class="bottom-nav__item" aria-label="Shop categories"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg><span>Shop</span></a>
+    <button class="bottom-nav__item bottom-nav__item--center" id="search-open" aria-label="Search"><span class="bottom-nav__search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span></button>
+    <a href="#wishlist" class="bottom-nav__item" aria-label="Wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-4.5-9-9.5C1.5 7.5 4 4 7.5 4c1.7 0 3.3 1 4.5 2.5C13.2 5 14.8 4 16.5 4 20 4 22.5 7.5 21 11.5c-2 5-9 9.5-9 9.5z"/></svg><span>Saved</span></a>
+    <a href="#cart" class="bottom-nav__item" aria-label="Bag, 0 items"><span class="bottom-nav__bag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 7h12l-1 13H7L6 7z"/><path d="M9 7V5a3 3 0 0 1 6 0v2"/></svg><em class="bottom-nav__count">0</em></span><span>Bag</span></a>
+  </nav>
+
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 19V6"/><path d="m6 12 6-6 6 6"/></svg></button>
+
+  <main>
+
+    <section class="hero" aria-label="Pause Collection">
+      <div class="hero__copy">
+        <p class="kicker">New Drop · Pause Collection</p>
+        <h1 class="hero__title"><em>Pause.</em><br/>Reset.</h1>
+        <p class="hero__sub">Easy shirts, breathable cottons, and shoes you'll actually walk in. 240+ new pieces.</p>
+        <div class="hero__cta">
+          <a href="#men" class="btn btn--primary">Shop Men</a>
+          <a href="#women" class="btn btn--primary btn--outline">Shop Women</a>
+        </div>
+        <p class="hero__credit">Free returns · 2-day delivery in major cities</p>
+      </div>
+      <figure class="hero__image">
+        <img src="https://outfitters.com.pk/cdn/shop/files/Pause-Menu_tile-men.jpg?width=1600" alt="Outfitters Pause Collection campaign" loading="eager" />
+        <figcaption class="hero__image-caption">
+          <span class="kicker">The Pause Edit</span>
+          <span>Shirts · T-Shirts · Trousers · Footwear</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <aside class="drop-strip" aria-label="Next drop countdown">
+      <div class="drop-strip__left">
+        <span class="kicker">Coming Soon</span>
+        <span class="drop-strip__name">Artisanal Collection · Vol. II</span>
+      </div>
+      <div class="drop-strip__countdown" id="countdown" aria-live="polite">
+        <span><b>07</b><small>Days</small></span><span class="sep" aria-hidden="true">:</span>
+        <span><b>14</b><small>Hrs</small></span><span class="sep" aria-hidden="true">:</span>
+        <span><b>32</b><small>Min</small></span><span class="sep" aria-hidden="true">:</span>
+        <span><b>08</b><small>Sec</small></span>
+      </div>
+      <a href="#remind" class="drop-strip__cta">Notify me <span aria-hidden="true">&rarr;</span></a>
+    </aside>
+
+    <section class="categories" id="shop">
+      <header class="section-head section-head--center">
+        <p class="kicker">Shop by Category</p>
+        <h2 class="section-title">Find your <em>fit.</em></h2>
+      </header>
+      <div class="categories__grid">
+        <a href="#" class="cat-tile"><img src="https://outfitters.com.pk/cdn/shop/files/F1008103001_3_copy.jpg?width=800" alt="Shirts" /><span class="cat-tile__label">Shirts</span><span class="cat-tile__count">187 pieces</span></a>
+        <a href="#" class="cat-tile"><img src="https://outfitters.com.pk/cdn/shop/files/F2101106001_1.jpg?width=800" alt="T-Shirts" /><span class="cat-tile__label">T-Shirts</span><span class="cat-tile__count">142 pieces</span></a>
+        <a href="#" class="cat-tile"><img src="https://outfitters.com.pk/cdn/shop/files/F2120106004.jpg?width=800" alt="Polos" /><span class="cat-tile__label">Polos</span><span class="cat-tile__count">76 pieces</span></a>
+        <a href="#" class="cat-tile"><img src="https://outfitters.com.pk/cdn/shop/files/F1854106720_04ac2b22-42b3-46b5-b794-68dcce8f7e9a.jpg?width=800" alt="Denim" /><span class="cat-tile__label">Denim</span><span class="cat-tile__count">94 pieces</span></a>
+        <a href="#" class="cat-tile"><img src="https://outfitters.com.pk/cdn/shop/files/F0766108117_4_copy.jpg?width=800" alt="Trousers" /><span class="cat-tile__label">Trousers</span><span class="cat-tile__count">68 pieces</span></a>
+        <a href="#" class="cat-tile"><img src="https://outfitters.com.pk/cdn/shop/files/F0395112901_5.jpg?width=800" alt="Footwear" /><span class="cat-tile__label">Footwear</span><span class="cat-tile__count">53 pieces</span></a>
+      </div>
+    </section>
+
+    <section class="products" id="new-in">
+      <header class="section-head products__head">
+        <div><p class="kicker">New In · This Week</p><h2 class="section-title">Fresh <em>arrivals.</em></h2></div>
+        <a href="#" class="link-underline products__viewall">View all 240 &rarr;</a>
+      </header>
+      <div class="products__grid">
+
+        <article class="product"><a href="#" class="product__media"><span class="product__badge">New</span><img src="https://outfitters.com.pk/cdn/shop/files/F1074103901.jpg?width=800" alt="Striped Shirt" class="product__img product__img--front" /><img src="https://outfitters.com.pk/cdn/shop/files/F1046103127_2_copy.jpg?width=800" alt="" class="product__img product__img--back" /><button class="product__quick">Quick add +</button></a><div class="product__meta"><h3>Striped Shirt</h3><p class="product__price">PKR 5,490</p><div class="product__swatches"><span style="background:#1a1310"></span><span style="background:#d4c4a0"></span><span style="background:#2d3b5c"></span><span class="product__swatches-more">+2</span></div></div></article>
+
+        <article class="product"><a href="#" class="product__media"><img src="https://outfitters.com.pk/cdn/shop/files/F1742106001._5cab74e2-698f-42b1-a54e-8e27010552d1.jpg?width=800" alt="Basic Crew Neck T-Shirt" class="product__img product__img--front" /><img src="https://outfitters.com.pk/cdn/shop/files/F2085106636.jpg?width=800" alt="" class="product__img product__img--back" /><button class="product__quick">Quick add +</button></a><div class="product__meta"><h3>Basic Crew Neck T-Shirt</h3><p class="product__price">PKR 3,290</p><div class="product__swatches"><span style="background:#f5f0e8"></span><span style="background:#1a1310"></span><span style="background:#a8341c"></span><span style="background:#c8a165"></span><span class="product__swatches-more">+3</span></div></div></article>
+
+        <article class="product"><a href="#" class="product__media"><span class="product__badge product__badge--limited">Limited</span><img src="https://outfitters.com.pk/cdn/shop/files/F0899103901.jpg?width=800" alt="Slim Fit Denim" class="product__img product__img--front" /><img src="https://outfitters.com.pk/cdn/shop/files/F1070103618_4.jpg?width=800" alt="" class="product__img product__img--back" /><button class="product__quick">Quick add +</button></a><div class="product__meta"><h3>Slim Fit Denim</h3><p class="product__price">PKR 5,990</p><div class="product__swatches"><span style="background:#2d3b5c"></span><span style="background:#1a1310"></span><span class="product__swatches-more">+1</span></div></div></article>
+
+        <article class="product"><a href="#" class="product__media"><img src="https://outfitters.com.pk/cdn/shop/files/F2101106001_1.jpg?width=800" alt="Embroidered Slogan T-Shirt" class="product__img product__img--front" /><img src="https://outfitters.com.pk/cdn/shop/files/F2101106621_1.jpg?width=800" alt="" class="product__img product__img--back" /><button class="product__quick">Quick add +</button></a><div class="product__meta"><h3>Embroidered Slogan T-Shirt</h3><p class="product__price">PKR 3,690</p><div class="product__swatches"><span style="background:#f5f0e8"></span><span style="background:#2d3b5c"></span><span style="background:#c8a165"></span></div></div></article>
+
+        <article class="product"><a href="#" class="product__media"><span class="product__badge product__badge--new">New</span><img src="https://outfitters.com.pk/cdn/shop/files/F1008103120_2_copy.jpg?width=800" alt="Button Up Shirt" class="product__img product__img--front" /><img src="https://outfitters.com.pk/cdn/shop/files/F1008103001_3_copy.jpg?width=800" alt="" class="product__img product__img--back" /><button class="product__quick">Quick add +</button></a><div class="product__meta"><h3>Button Up Shirt</h3><p class="product__price">PKR 5,990</p><div class="product__swatches"><span style="background:#5b6045"></span><span style="background:#f5f0e8"></span><span style="background:#1a1310"></span></div></div></article>
+
+        <article class="product"><a href="#" class="product__media"><img src="https://outfitters.com.pk/cdn/shop/files/F0766108117_4_copy.jpg?width=800" alt="Regular Fit Trousers" class="product__img product__img--front" /><img src="https://outfitters.com.pk/cdn/shop/files/F0622108801LOWER..jpg?width=800" alt="" class="product__img product__img--back" /><button class="product__quick">Quick add +</button></a><div class="product__meta"><h3>Regular Fit Trousers</h3><p class="product__price">PKR 5,990</p><div class="product__swatches"><span style="background:#1a1310"></span><span style="background:#5b6045"></span><span style="background:#9b8e7a"></span><span style="background:#2d3b5c"></span><span class="product__swatches-more">+2</span></div></div></article>
+
+        <article class="product"><a href="#" class="product__media"><img src="https://outfitters.com.pk/cdn/shop/files/F2120106004.jpg?width=800" alt="Embroidered T-Shirt" class="product__img product__img--front" /><img src="https://outfitters.com.pk/cdn/shop/files/F2120106621.jpg?width=800" alt="" class="product__img product__img--back" /><button class="product__quick">Quick add +</button></a><div class="product__meta"><h3>Embroidered T-Shirt</h3><p class="product__price">PKR 3,690</p><div class="product__swatches"><span style="background:#e8d56b"></span><span style="background:#2d3b5c"></span><span style="background:#1a1310"></span></div></div></article>
+
+        <article class="product"><a href="#" class="product__media"><span class="product__badge product__badge--new">New</span><img src="https://outfitters.com.pk/cdn/shop/files/F0386112113_6.jpg?width=800" alt="Double Strap Suede Slides" class="product__img product__img--front" /><img src="https://outfitters.com.pk/cdn/shop/files/F0365112002_4.jpg?width=800" alt="" class="product__img product__img--back" /><button class="product__quick">Quick add +</button></a><div class="product__meta"><h3>Double Strap Suede Slides</h3><p class="product__price">PKR 4,990</p><div class="product__swatches"><span style="background:#c4a373"></span><span style="background:#1a1310"></span></div></div></article>
+
+      </div>
+    </section>
+
+    <section class="campaign">
+      <a href="#" class="campaign__half"><img src="https://outfitters.com.pk/cdn/shop/files/men_16360290-4722-4251-92a0-2e72fe7f9787.jpg?width=1200" alt="Men's Edit" /><div class="campaign__copy"><p class="kicker kicker--light">For Him</p><h2>The Men's Edit</h2><span class="link-underline link-underline--light">Shop Men &rarr;</span></div></a>
+      <a href="#" class="campaign__half"><img src="https://outfitters.com.pk/cdn/shop/files/F0527203326_c60cfc6c-edea-43fc-a22a-f9edd464a373.jpg?width=1200" alt="Women's Edit" /><div class="campaign__copy"><p class="kicker kicker--light">For Her</p><h2>The Women's Edit</h2><span class="link-underline link-underline--light">Shop Women &rarr;</span></div></a>
+    </section>
+
+    <section class="products products--bestsellers">
+      <header class="section-head products__head">
+        <div><p class="kicker">Customer Favorites</p><h2 class="section-title">Best <em>sellers.</em></h2></div>
+        <a href="#" class="link-underline products__viewall">View all &rarr;</a>
+      </header>
+      <div class="products__grid products__grid--4">
+
+        <article class="product"><a href="#" class="product__media"><span class="product__badge product__badge--best">#1 Best Seller</span><img src="https://outfitters.com.pk/cdn/shop/files/F1211103001_2_copy.jpg?width=800" alt="" class="product__img product__img--front" /><img src="https://outfitters.com.pk/cdn/shop/files/F1023103902_2_copy.jpg?width=800" alt="" class="product__img product__img--back" /><button class="product__quick">Quick add +</button></a><div class="product__meta"><h3>Essential Button Up Shirt</h3><p class="product__price">PKR 5,990</p><p class="product__rating"><span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.8 (1,240)</p></div></article>
+
+        <article class="product"><a href="#" class="product__media"><img src="https://outfitters.com.pk/cdn/shop/files/F0603108901LOWER._b69e7474-5e11-4a54-b3b1-82bb4db46eff.jpg?width=800" alt="" class="product__img product__img--front" /><img src="https://outfitters.com.pk/cdn/shop/files/F0773108117LOWER._6cea84de-f542-417a-a9a6-810cf23143e4.jpg?width=800" alt="" class="product__img product__img--back" /><button class="product__quick">Quick add +</button></a><div class="product__meta"><h3>Straight Fit Trousers</h3><p class="product__price">PKR 7,990</p><p class="product__rating"><span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.7 (892)</p></div></article>
+
+        <article class="product"><a href="#" class="product__media"><img src="https://outfitters.com.pk/cdn/shop/files/F1664106116_ba3b4e55-0be8-4ee3-a9d0-609aab41b955.jpg?width=800" alt="" class="product__img product__img--front" /><img src="https://outfitters.com.pk/cdn/shop/files/F1931106005.jpg?width=800" alt="" class="product__img product__img--back" /><button class="product__quick">Quick add +</button></a><div class="product__meta"><h3>Slogan Print T-Shirt</h3><p class="product__price">PKR 3,290</p><p class="product__rating"><span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.9 (2,108)</p></div></article>
+
+        <article class="product"><a href="#" class="product__media"><img src="https://outfitters.com.pk/cdn/shop/files/F1720106618_e994bb41-844a-44c4-a8ff-2c5726c3af7e.jpg?width=800" alt="" class="product__img product__img--front" /><img src="https://outfitters.com.pk/cdn/shop/files/F1854106720_04ac2b22-42b3-46b5-b794-68dcce8f7e9a.jpg?width=800" alt="" class="product__img product__img--back" /><button class="product__quick">Quick add +</button></a><div class="product__meta"><h3>Straight Fit Jean</h3><p class="product__price">PKR 6,490</p><p class="product__rating"><span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.6 (716)</p></div></article>
+
+      </div>
+    </section>
+
+    <section class="sale" id="sale">
+      <div class="sale__inner">
+        <header class="sale__head">
+          <p class="kicker kicker--sale">Last Chance</p>
+          <h2 class="section-title section-title--light">Up to <em>50% off.</em></h2>
+          <p class="section-lede section-lede--light">Season closeout. When it's gone, it's gone. No restocks.</p>
+          <a href="#" class="btn btn--brass">Shop the sale</a>
+        </header>
+        <div class="sale__grid">
+          <article class="product product--sale"><a href="#" class="product__media"><span class="product__badge product__badge--sale">-40%</span><img src="https://outfitters.com.pk/cdn/shop/files/F1048103999_2_copy.jpg?width=800" alt="" class="product__img product__img--front" /><img src="https://outfitters.com.pk/cdn/shop/files/F9974103998_5_copy.jpg?width=800" alt="" class="product__img product__img--back" /></a><div class="product__meta"><h3>Striped Shirt (Multi)</h3><p class="product__price"><span class="was">PKR 4,490</span> PKR 2,694</p></div></article>
+          <article class="product product--sale"><a href="#" class="product__media"><span class="product__badge product__badge--sale">-35%</span><img src="https://outfitters.com.pk/cdn/shop/files/F0622108801LOWER..jpg?width=800" alt="" class="product__img product__img--front" /><img src="https://outfitters.com.pk/cdn/shop/files/F0691108002LOWEr.jpg?width=800" alt="" class="product__img product__img--back" /></a><div class="product__meta"><h3>Straight Fit Trousers (Olive)</h3><p class="product__price"><span class="was">PKR 5,490</span> PKR 3,569</p></div></article>
+          <article class="product product--sale"><a href="#" class="product__media"><span class="product__badge product__badge--sale">-50%</span><img src="https://outfitters.com.pk/cdn/shop/files/F2085106636.jpg?width=800" alt="" class="product__img product__img--front" /><img src="https://outfitters.com.pk/cdn/shop/files/F1931106005.jpg?width=800" alt="" class="product__img product__img--back" /></a><div class="product__meta"><h3>Graphic T-Shirt</h3><p class="product__price"><span class="was">PKR 2,890</span> PKR 1,445</p></div></article>
+          <article class="product product--sale"><a href="#" class="product__media"><span class="product__badge product__badge--sale">-30%</span><img src="https://outfitters.com.pk/cdn/shop/files/F9974103998_5_copy.jpg?width=800" alt="" class="product__img product__img--front" /><img src="https://outfitters.com.pk/cdn/shop/files/F1063103998_3.jpg?width=800" alt="" class="product__img product__img--back" /></a><div class="product__meta"><h3>Checkered Shirt</h3><p class="product__price"><span class="was">PKR 4,490</span> PKR 3,143</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="club" id="club">
+      <div class="club__inner">
+        <p class="kicker kicker--brass">Loyalty, simplified</p>
+        <h2 class="club__title">Join the <em>OTR Club.</em></h2>
+        <p class="club__lede">Early access to drops. Free returns. Birthday treat. Three tiers — earn them by shopping, not by paying.</p>
+        <div class="club__tiers">
+          <div class="tier"><p class="tier__name">Member</p><p class="tier__perk">Free to join</p><ul class="tier__list"><li>10% off first order</li><li>Birthday treat</li><li>Member-only sale access</li></ul></div>
+          <div class="tier"><p class="tier__name">Insider</p><p class="tier__perk">3+ orders</p><ul class="tier__list"><li>Free returns</li><li>Early access to new drops</li><li>Free standard shipping</li></ul></div>
+          <div class="tier tier--top"><p class="tier__name">Icon</p><p class="tier__perk">8+ orders / year</p><ul class="tier__list"><li>Free express shipping</li><li>Priority WhatsApp support</li><li>Invite to private sales</li></ul></div>
+        </div>
+        <a href="#" class="btn btn--brass">Join the club</a>
+      </div>
+    </section>
+
+    <section class="community">
+      <header class="section-head section-head--center">
+        <p class="kicker">#OutfittersOnYou</p>
+        <h2 class="section-title">Styled by <em>you.</em></h2>
+        <p class="section-lede">Tag us on Instagram for a chance to be featured. Best fits get reposted every Friday.</p>
+      </header>
+      <div class="community__grid">
+        <a href="#" class="community__tile"><img src="https://outfitters.com.pk/cdn/shop/files/F1074103901.jpg?width=600" alt=""/><span>@hassanrazak</span></a>
+        <a href="#" class="community__tile"><img src="https://outfitters.com.pk/cdn/shop/files/F0527203326_c60cfc6c-edea-43fc-a22a-f9edd464a373.jpg?width=600" alt=""/><span>@nyla.k</span></a>
+        <a href="#" class="community__tile"><img src="https://outfitters.com.pk/cdn/shop/files/F1008103120_2_copy.jpg?width=600" alt=""/><span>@osman_d</span></a>
+        <a href="#" class="community__tile"><img src="https://outfitters.com.pk/cdn/shop/files/F0519203002_3267a38a-2a20-4005-9d91-a1e3600c977a.jpg?width=600" alt=""/><span>@zaynbhatti</span></a>
+        <a href="#" class="community__tile"><img src="https://outfitters.com.pk/cdn/shop/files/F0843203633_1_3729b8cd-529f-483c-a096-d5681327e882.jpg?width=600" alt=""/><span>@meher_a</span></a>
+        <a href="#" class="community__tile"><img src="https://outfitters.com.pk/cdn/shop/files/F1053103630_2_copy.jpg?width=600" alt=""/><span>@faisal.lhr</span></a>
+        <a href="#" class="community__tile"><img src="https://outfitters.com.pk/cdn/shop/files/F0806203110_1.jpg?width=600" alt=""/><span>@arsalan_m</span></a>
+        <a href="#" class="community__tile"><img src="https://outfitters.com.pk/cdn/shop/files/F0892203001_4cf585d4-a240-41bf-bb9b-14ebb2b58740.jpg?width=600" alt=""/><span>@sara_k</span></a>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <div class="newsletter__inner">
+        <h2 class="newsletter__title">Get <em>10% off</em> your first order.</h2>
+        <p class="newsletter__lede">Subscribe for early drops, exclusive sales, and styling ideas. One email a week, easy to unsubscribe.</p>
+        <form class="newsletter__form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed';">
+          <label class="newsletter__label" for="newsletter-email">Email address</label>
+          <input id="newsletter-email" type="email" required placeholder="you@somewhere.pk" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__brand"><p class="footer__wordmark">Outfitters</p><p class="footer__tagline">Contemporary fashion for men, women, and juniors. Pakistan.</p></div>
+      <nav class="footer__col" aria-label="Shop"><p class="footer__col-title">Shop</p><a href="#">Men</a><a href="#">Women</a><a href="#">Juniors</a><a href="#">Footwear</a><a href="#">Fragrances</a><a href="#">Accessories</a><a href="#">Last Chance</a></nav>
+      <nav class="footer__col" aria-label="Help"><p class="footer__col-title">Help</p><a href="#">Track Order</a><a href="#">Returns &amp; Exchanges</a><a href="#">Size Guide</a><a href="#">Shipping Info</a><a href="#">Contact</a><a href="#">FAQs</a></nav>
+      <nav class="footer__col" aria-label="About"><p class="footer__col-title">About</p><a href="#">Our Story</a><a href="#">Store Locator</a><a href="#">OTR Club</a><a href="#">Careers</a><a href="#">Press</a></nav>
+      <nav class="footer__col" aria-label="Connect"><p class="footer__col-title">Connect</p><a href="#">Instagram</a><a href="#">TikTok</a><a href="#">YouTube</a><a href="#">WhatsApp</a></nav>
+    </div>
+    <div class="footer__bottom">
+      <div class="footer__pay"><span class="kicker">Pay how you like</span><span class="pay-chip">Visa</span><span class="pay-chip">Mastercard</span><span class="pay-chip">BaadMay · Pay in 3</span><span class="pay-chip pay-chip--cod">Cash on Delivery</span></div>
+      <p class="footer__legal">&copy; 2026 Outfitters. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script>
+(function(){
+  const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const hoverFine = matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+  window.addEventListener("load", () => {
+    const loader = document.getElementById("loader");
+    if (!loader) return;
+    setTimeout(() => {
+      loader.classList.add("is-done");
+      document.body.classList.add("is-loaded");
+      revealVisible();
+    }, reduced ? 200 : 1200);
+  });
+
+  function initLenis() {
+    if (reduced || typeof Lenis === "undefined") return;
+    const lenis = new Lenis({ duration: 1.15, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true, smoothTouch: false });
+    window.lenis = lenis;
+    function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+    requestAnimationFrame(raf);
+  }
+
+  function initCursor() {
+    if (!hoverFine || reduced) return;
+    const cursor = document.getElementById("cursor");
+    const label = document.getElementById("cursor-label");
+    if (!cursor || !label) return;
+    document.body.classList.add("cursor-ready");
+    let mx = innerWidth/2, my = innerHeight/2, cx = mx, cy = my;
+    addEventListener("mousemove", e => { mx = e.clientX; my = e.clientY; cursor.classList.add("is-active"); });
+    addEventListener("mouseout", e => { if (!e.relatedTarget) cursor.classList.remove("is-active"); });
+    const lerp = (a,b,t) => a + (b-a)*t;
+    (function tick(){ cx = lerp(cx,mx,0.18); cy = lerp(cy,my,0.18); cursor.style.transform = `translate3d(${cx}px, ${cy}px, 0) translate(-50%, -50%)`; requestAnimationFrame(tick); })();
+    const hoverMap = [[".product__media","Quick add +"],[".cat-tile","View"],[".campaign__half","Shop"],[".community__tile","View"],[".hero__image","Discover"],["a, button",""]];
+    hoverMap.forEach(([sel,text]) => {
+      document.querySelectorAll(sel).forEach(el => {
+        el.addEventListener("mouseenter", () => { cursor.classList.add("is-hover"); label.textContent = text; });
+        el.addEventListener("mouseleave", () => { cursor.classList.remove("is-hover"); label.textContent = ""; });
+      });
+    });
+  }
+
+  function splitText() {
+    const selectors = [".hero__title", ".section-title", ".club__title", ".newsletter__title"];
+    selectors.forEach(sel => {
+      document.querySelectorAll(sel).forEach(el => {
+        if (el.dataset.split === "done") return;
+        const html = el.innerHTML;
+        const tokens = html.split(/(<[^>]+>|\s+)/g);
+        const out = tokens.map(tok => {
+          if (!tok) return "";
+          if (/^<[^>]+>$/.test(tok)) return tok;
+          if (/^\s+$/.test(tok)) return " ";
+          return `<span class="split-word">${tok}</span>`;
+        }).join("");
+        el.innerHTML = `<span class="split-line">${out}</span>`;
+        el.dataset.split = "done";
+      });
+    });
+  }
+
+  function initEllipseTracking() {
+    document.querySelectorAll(".cat-tile").forEach(tile => {
+      tile.addEventListener("mousemove", e => {
+        const r = tile.getBoundingClientRect();
+        tile.style.setProperty("--hover-x", `${((e.clientX-r.left)/r.width)*100}%`);
+        tile.style.setProperty("--hover-y", `${((e.clientY-r.top)/r.height)*100}%`);
+      });
+    });
+  }
+
+  let revealObserver;
+  function initReveals() {
+    const targets = document.querySelectorAll(".hero, .categories, .products, .campaign, .sale, .club, .community, .newsletter, .product, .cat-tile, .tier, .community__tile, .hero__image, .product__media, .campaign__half");
+    document.querySelectorAll(".hero__image, .campaign__half").forEach(el => el.classList.add("reveal-img"));
+    revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-revealed");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: "0px 0px -10% 0px" });
+    targets.forEach(t => revealObserver.observe(t));
+  }
+
+  function revealVisible() {
+    document.querySelectorAll(".hero, .hero__image, .utility-bar").forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (r.top < innerHeight && r.bottom > 0) el.classList.add("is-revealed");
+    });
+  }
+
+  function initMobileMenu() {
+    const menuToggle = document.querySelector(".header__menu-toggle");
+    const mobileNav = document.getElementById("mobile-nav");
+    if (!menuToggle || !mobileNav) return;
+    menuToggle.addEventListener("click", () => {
+      const open = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", String(!open));
+      mobileNav.hidden = open;
+      document.body.style.overflow = open ? "" : "hidden";
+    });
+    mobileNav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        menuToggle.setAttribute("aria-expanded", "false");
+        mobileNav.hidden = true;
+        document.body.style.overflow = "";
+      });
+    });
+  }
+
+  function initMobileHeader() {
+    if (innerWidth > 768) return;
+    const header = document.getElementById("site-header");
+    if (!header) return;
+    let lastY = scrollY, ticking = false;
+    const onScroll = () => {
+      const y = scrollY;
+      header.classList.toggle("is-condensed", y > 40);
+      if (y > 200 && y > lastY + 5) header.classList.add("is-hidden");
+      else if (y < lastY - 5) header.classList.remove("is-hidden");
+      lastY = y;
+      ticking = false;
+    };
+    addEventListener("scroll", () => { if (!ticking) { requestAnimationFrame(onScroll); ticking = true; } });
+  }
+
+  function initSearchDrawer() {
+    const drawer = document.getElementById("search-drawer");
+    const openBtn = document.getElementById("search-open");
+    const closeBtn = document.getElementById("search-close");
+    if (!drawer || !openBtn || !closeBtn) return;
+    const open = () => { drawer.hidden = false; document.body.style.overflow = "hidden"; setTimeout(() => drawer.querySelector("input")?.focus(), 350); };
+    const close = () => { drawer.hidden = true; document.body.style.overflow = ""; };
+    openBtn.addEventListener("click", open);
+    closeBtn.addEventListener("click", close);
+    document.querySelectorAll(".header__actions .icon-btn[aria-label='Search']").forEach(b => b.addEventListener("click", open));
+    document.addEventListener("keydown", e => { if (e.key === "Escape" && !drawer.hidden) close(); });
+  }
+
+  function initBackToTop() {
+    const btn = document.getElementById("back-to-top");
+    if (!btn) return;
+    addEventListener("scroll", () => { btn.classList.toggle("is-visible", scrollY > 600); }, { passive: true });
+    btn.addEventListener("click", () => {
+      if (window.lenis) window.lenis.scrollTo(0);
+      else scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
+  function initCountdown() {
+    const countdown = document.getElementById("countdown");
+    if (!countdown) return;
+    const target = new Date();
+    target.setDate(target.getDate() + 7);
+    target.setHours(target.getHours() + 14);
+    target.setMinutes(target.getMinutes() + 32);
+    const cells = countdown.querySelectorAll("b");
+    const pad = n => String(Math.max(0,n)).padStart(2,"0");
+    const tick = () => {
+      const diff = target - new Date();
+      if (diff <= 0) { cells.forEach(c => c.textContent = "00"); return; }
+      cells[0].textContent = pad(Math.floor(diff/86400000));
+      cells[1].textContent = pad(Math.floor((diff%86400000)/3600000));
+      cells[2].textContent = pad(Math.floor((diff%3600000)/60000));
+      cells[3].textContent = pad(Math.floor((diff%60000)/1000));
+    };
+    tick(); setInterval(tick, 1000);
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    splitText();
+    initReveals();
+    initEllipseTracking();
+    initCursor();
+    initMobileMenu();
+    initMobileHeader();
+    initSearchDrawer();
+    initBackToTop();
+    initCountdown();
+    initLenis();
+  });
+})();
+  </script>
+</body>
+</html>
